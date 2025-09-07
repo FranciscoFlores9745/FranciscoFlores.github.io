@@ -3,11 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projects</title>
+
+
+<style>
+
+aside{
+   width:30%;
+   float:inline-end;
+
+
+        }
+.whole-page {
+  margin: 0;
+  padding: 5px;
+  background-color: black;
+  width: 60%;
+ }
+
+.whole-page > h1, .part {
+  margin: 10px;
+  padding: 5px;
+  width:50%;
+}
+
+.part {
+  background: white;
+}
+
+.part > h2, p {
+  margin:10px;
+  font-size: 90%;
+}
+.part > h3, p {
+  margin:10px;
+  font-size: 80%;
+}
+</style>
+
 </head>
 <body>
-    <h1>Projects</h1>
-    <img src="img/choaticserenity_mask.jpg" alt="" width="200" height="200">
-    <img src="img/Overdone.jpg" alt="" width="200" height="200">
+
+    <main class="whole-page">
+    <h1 class ="part">Projects</h1>
+    <nav>
+  <button> <a href ="./AboutME.html" >AboutME</a></button>
+  <button><a href ="./Contact.html" >Contacts</a></button>
+  <button><a href ="./Hobbies.html" >Hobbies</a></button>
+  </nav>
+  <article class="part">
+    <p>
+        Here are several of what I consider my best works, some I have done for myself, while others
+        where done for people who asked or for a community I was apart of Online.
+    </p>
+
+  </article>
+  <article class="part">
+     <h2>Works </h2>
+    <img src="img/Overdone.jpg" alt="Over Done" width="150" height="200">
+    <img src="img/Dominance.jpg" alt="Dominance" width="150" height="200">
+    <img src="img/TurningPoint.jpg" alt="Turning Point" width="250" height="200">
+  </article>
+
+  <article class="part">
+    <h2>Commisions/Community Art</h2>
+    <img src="img/choaticserenity_mask.jpg" alt="Chaotic Serenity" width="150" height="200">
+    <img src="img/Hello.jpg" alt="Hello" width="150" height="200">
+  </article>
+    </main>
 </body>
 </html>
