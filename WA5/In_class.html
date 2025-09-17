@@ -1,61 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 
-    <style>
-    .card-header{
-        display:flex;
-        justify-content:space-between;
-        align-items:center;
-        flex-direction: column;
-        padding:50px;
-        font-family:Arial, Helvetica, sans-serif
+  <style>
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
+      padding: 50px;
+      font-family: Arial, Helvetica, sans-serif
     }
 
-    h3{
-        text-align: center;
+    h3 {
+      text-align: center;
     }
 
-    .expand-btn{
-       background-color:burlywood;
-       border:none;
-       width: 60px;
-       height: 30px;
-       text-transform: '';
-       border-radius:5px;
+    .expand-btn {
+      position:relative;
+      background-color: burlywood;
+      border: none;
+      width: 60px;
+      height: 30px;
 
+      border-radius: 5px;
 
-    }
-
-    .expand-btn:hover{
-       background-color:greenyellow;
-       border:none;
-       width: 60px;
-       height: 30px;
-       border-radius:5px;
+      transition-duration: 0.4s;
+      text-decoration: none;
+      overflow: hidden;
+      cursor: pointer;
 
 
     }
 
-    .card-content{
-        display:none;
+    .expand-btn:hover {
+      background-color: greenyellow;
+      border: none;
+      width: 150px;
+      height: 50px;
+      border-radius: 5px;
 
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        text-align:center;
-        margin-top: 2rem;
-        border: .25rem solid bisque;
+
     }
 
+     .expand-btn:after {
+      content: "";
+      background: darkgreen;
+      display: block;
+      position: absolute;
+      padding-top: 90%;
+      padding-left: 150%;
+      margin-left: -20% !important;
+      margin-top: -50%;
+      opacity: 0;
+       border-radius: 5px;
+      transition: all 0.8s
+    }
+
+    .expand-btn:active:after {
+      padding: 0;
+      margin: 0;
+      opacity: 1;
+      transition: 0s
+    }
+
+    .card-content {
+      position:relative;
+      display: none;
+
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+      margin-top: 2rem;
+      border: .25rem solid bisque;
+
+    }
     
 
-    </style>
 
-   <!-- /*
+  </style>
+
+  <!-- /*
     Single Elements
     const button=document.querySelector(.'menu-button')
 
@@ -78,21 +108,21 @@
 
 
 <body>
-<div class="card" >
-  <div class="card-header">
-    <h3>Community Garden Project</h3>
-    <button class="expand-btn" aria-label="Expand card">+</button>
-  </div>
-  <div class="card-content">
-    <p class="summary">Join neighbors in creating a shared growing space...</p>
-    <div class="details hidden">
-      <p>Meeting every Saturday at 10am. Tools provided. All skill levels welcome.</p>
-      <p>Contact: garden@community.org</p>
+  <div class="card">
+    <div class="card-header">
+      <h3 tabindex="1">Community Garden Project</h3>
+      <button class="expand-btn" id="expand-button" aria-label="Expand card" tabindex="2">+</button>
+    </div>
+    <div class="card-content" tabindex="3">
+      <p class="summary" tabindex="4">Join neighbors in creating a shared growing space...</p>
+      <div class="details hidden" tabindex="5">
+        <p tabindex="6">Meeting every Saturday at 10am. Tools provided. All skill levels welcome.</p>
+        <p tabindex="7      ">Contact: garden@community.org</p>
+      </div>
     </div>
   </div>
-</div>
 
-<script>
+  <script>
 
     let info = false;
 
@@ -101,22 +131,33 @@
 
     expandBtn.addEventListener('click', showInfo);
 
-    function showInfo(){
-        console.log("hi");
-        alert("this is an alert");
+    function showInfo() {
+      /*console.log("hi");
+      alert("this is an alert");
+      */
 
-        if(info==false){
-          details.style.display = "flex";
-          info = true;
-        }
-        else{
-            details.style.display = "none";
-            info = false;
-        }
+      
+
+      if (info == false) {
+        details.style.display = "flex"; 
+      
+        info = true;
+        document.getElementById('expand-button').innerText = "-";
+        document.getElementById('expand-button').setAttribute('aria-label','Close Card');
+
+      }
+      else {
+        details.style.display = "none";
+        info = false;
+          document.getElementById('expand-button').innerText = "+";
+          document.getElementById('expand-button').setAttribute('aria-label','Expand Card');
+         
+      }
     }
 
 
-</script>
+  </script>
 
 </body>
+
 </html>
