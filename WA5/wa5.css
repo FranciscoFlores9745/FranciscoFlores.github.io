@@ -1,0 +1,46 @@
+.main-nav{
+display:flex;
+justify-content:space-between;
+background-color:black;
+
+padding:2rem;
+
+
+}
+
+.nav-brand{
+    background-color:white;
+    display:flex;
+    padding:2rem;
+}
+
+.nav-toggle{
+    background-color:white;
+    display:none;
+
+}
+
+  .nav-menu{
+    display:flex;
+    background-color:white;
+
+
+    gap:2vw;
+}
+
+
+
+@media(max-width:760px){
+
+   .nav-menu{ 
+    display: none;
+    position:absolute
+   }
+
+   .nav-toggle{
+    display:block;
+   }
+
+
+   
+}
