@@ -10,6 +10,7 @@ padding:2rem;
 
 .nav-brand{
     background-color:white;
+    justify-content:center;
     display:flex;
     padding:2rem;
 }
@@ -17,6 +18,7 @@ padding:2rem;
 .nav-toggle{
     background-color:white;
     display:none;
+    padding: .5rem;
 
 }
 
@@ -39,6 +41,7 @@ padding:2rem;
 
    .nav-toggle{
     display:block;
+    padding: .5rem;
    }
 
 
