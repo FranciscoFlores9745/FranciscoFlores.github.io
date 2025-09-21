@@ -36,6 +36,7 @@ document.addEventListener('click',(e)=>{
     if((!navMenu.contains(e.target)&&!navToggle.contains(e.target))&&toggle==true){
 
         toggle=false;
+         document.getElementById('aria-expanded').setAttribute('aria-label','Toggle navigation menu')
         navMenu.classList.toggle("hide");
         navBurger.forEach( span =>{
         span.classList.toggle("close");
