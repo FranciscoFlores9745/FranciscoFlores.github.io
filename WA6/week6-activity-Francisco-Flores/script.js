@@ -14,32 +14,35 @@ filterButtons.forEach(button => {
 
 
         function filterPhotos(category) {
+            number = 0;
             photoCards.forEach(card => {
-                number = 0;
+
+
                 if (category === 'all' || card.dataset.catagory === category) {
-                     number++;
+                    number++;
                     console.log(card.dataset.catagory)
                     card.classList.toggle('block');
-                    card.style.opacity=100;
-                    setTimeout(()=>card.style.display = 'block',500);
-                    if(card.style.color == 'red'){
+                    card.style.opacity = 100;
+                    setTimeout(() => card.style.display = 'block', 500);
+                    if (card.style.color == 'red') {
                         card.style.color = 'black'
-                    }else{
-                    card.style.color = 'red'
-                    }
-                   
-                } else{
-                    
-                    console.log(card.dataset.catagory)
-                     card.classList.toggle('none');
-                     card.style.opacity=0;
-                    setTimeout(()=>card.style.display = 'none',500);
-                     if(card.style.color == 'black'){
+                    } else {
                         card.style.color = 'red'
-                    }else{
-                    card.style.color = 'black'
                     }
-                    
+                    document.getElementById("Photos").innerText = "#Photos: " + number;
+
+                } else {
+
+                    console.log(card.dataset.catagory)
+                    card.classList.toggle('none');
+                    card.style.opacity = 0;
+                    setTimeout(() => card.style.display = 'none', 500);
+                    if (card.style.color == 'black') {
+                        card.style.color = 'red'
+                    } else {
+                        card.style.color = 'black'
+                    }
+
                 }
             });
         }
