@@ -15,8 +15,9 @@ filterButtons.forEach(button => {
 
         function filterPhotos(category) {
             photoCards.forEach(card => {
+                number = 0;
                 if (category === 'all' || card.dataset.catagory === category) {
-
+                     number++;
                     console.log(card.dataset.catagory)
                     card.classList.toggle('block');
                     card.style.opacity=100;
@@ -26,6 +27,7 @@ filterButtons.forEach(button => {
                     }else{
                     card.style.color = 'red'
                     }
+                   
                 } else{
                     
                     console.log(card.dataset.catagory)
