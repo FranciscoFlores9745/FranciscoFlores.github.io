@@ -1,0 +1,246 @@
+.main-nav {
+    display: grid;
+    grid-template-areas:
+     "nav-brand  nav-menu nav-menu nav-menu nav-menu"
+    ;
+    grid-template-columns: 1fr,1fr,1fr,1fr,1fr;
+    column-gap:5px;
+    background-color: black;
+    padding: 1rem;
+
+
+}
+
+.main-nav > div.nav-brand {
+    background-color: white;
+    justify-content: center;
+    display: grid;
+    font-family: "dubbeldik-mn", sans-serif;
+    font-weight: 400;
+    width:400px;
+    font-style: normal;
+    border-radius: 10%;
+}
+
+.content-container {
+    display: grid;
+    grid-template-areas:
+    
+    "h2"
+    "p   pciture"
+    "h2"
+    "p    picture"
+    "h2"
+    "p    picture"
+    ;
+    grid-template-columns: 1fr,1fr,1fr,1fr,1fr,1fr;
+    grid-template-rows: 1fr,1fr,1fr,1fr,1fr,1fr,1fr;
+    background-color: silver;
+    font-family: "dubbeldik-mn", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-bottom: 2.5%;
+    column-gap:10%;
+    width:40%;
+}
+
+.background{
+    background-color:mediumspringgreen;
+    padding-bottom: 2.5%;
+}
+
+.content-container > h2{
+    background-color: #E0115F;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    border-radius: 10%;
+   
+}
+
+.content-container> p{
+font-family: "argent-pixel-cf", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.content-containter > aside.picture{
+    background-color: black;
+    position: absolute;
+    
+}
+
+h3{
+
+    font-family: "dubbeldik-mn", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+
+.background-images>aside.picture{
+    background-color:whitesmoke;
+}
+
+
+@media(min-width:761px) {
+    .nav-toggle {
+        background-color: white;
+        display: none;
+        padding: .5rem;
+
+    }
+
+  .main-nav > ul.nav-menu{
+        display: flex;
+        background-color: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        list-style-type: none;
+        right:5%;
+        top: 20%;
+        padding: 0;
+        column-gap:5px;
+        margin: 0;
+    }
+
+    li a{
+        float: left;
+        display: inline;
+        background-color: red;
+        border-radius: 10%;
+        color: azure;
+        margin-right: 50px;
+        font-size: xx-large;
+        text-decoration: none;
+    }
+
+    li a:hover {
+        background-color: greenyellow;
+        color: black;
+    }
+
+    li a:focus {
+        background-color: greenyellow;
+        color: black;
+    }
+
+}
+
+
+
+
+@media(max-width:760px) {
+
+    .nav-menu.show {
+        display: "block";
+        position: absolute;
+        background-color: whitesmoke;
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+        top: 0;
+        right: 0;
+        margin-top: 6rem;
+        margin-right: 1rem;
+        border-radius: 10%;
+        list-style-type: none;
+        row-gap: 0;
+
+    }
+
+
+
+    li a {
+        display: block;
+        background-color: whitesmoke;
+        color: black;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        border-radius: 10%;
+        font-style: normal;
+        height: 2rem;
+    }
+
+    li a:hover {
+        display: block;
+        background-color: goldenrod;
+        color: black;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        height: 2rem;
+    }
+
+    li a:focus {
+        display: block;
+        background-color: goldenrod;
+        color: black;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        height: 2rem;
+    }
+
+
+
+    .nav-menu.hide {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+        background-color: #E0115F;
+        border-radius: 10%;
+        padding: .5rem;
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .nav-toggle:hover {
+        display: block;
+        background-color: greenyellow;
+        padding: .5rem;
+    }
+
+    .nav-toggle:focus {
+        display: block;
+        background-color: greenyellow;
+        padding: .5rem;
+    }
+
+
+    span.open {
+        background-color: whitesmoke;
+        display: block;
+        width: 90%;
+        height: 10%;
+        padding: 2px;
+        margin-top: 10%;
+        transition: .5s;
+        border-radius: 10%;
+    }
+
+
+    span.close {
+        border-radius: 10%;
+        background-color: black;
+        rotate: 90deg;
+        display: block;
+        width: 90%;
+        height: 10%;
+        padding: 2px;
+        margin-right: 1rem;
+        transition: .5s;
+        row-gap: normal;
+    }
+
+
+
+
+
+}
