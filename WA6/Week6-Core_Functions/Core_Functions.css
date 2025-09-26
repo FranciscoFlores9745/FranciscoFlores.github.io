@@ -26,15 +26,15 @@
     display: grid;
     grid-template-areas:
     
-    "h2"
-    "p   pciture"
-    "h2"
+    "h2   h2"
+    "p   picture"
+    "h2   h2"
     "p    picture"
-    "h2"
+    "h2   h2"
     "p    picture"
     ;
-    grid-template-columns: 1fr,1fr,1fr,1fr,1fr,1fr;
-    grid-template-rows: 1fr,1fr,1fr,1fr,1fr,1fr,1fr;
+    grid-template-columns: 1fr,1fr;
+    grid-template-rows: 1fr,1fr,1fr,1fr,1fr,1fr;
     background-color: silver;
     font-family: "dubbeldik-mn", sans-serif;
     font-weight: 400;
@@ -42,6 +42,8 @@
     margin-bottom: 2.5%;
     column-gap:10%;
     width:40%;
+
+    
 }
 
 .background{
@@ -63,12 +65,11 @@ font-weight: 400;
 font-style: normal;
 }
 
-.content-containter > aside.picture{
+.content-container > aside.picture{
     background-color: black;
-    position: absolute;
+    margin-right: 90%;
     
 }
-
 h3{
 
     font-family: "dubbeldik-mn", sans-serif;
@@ -77,8 +78,11 @@ h3{
     color: white;
 }
 
-.background-images>aside.picture{
-    background-color:whitesmoke;
+.content-container > aside.picture{
+    background-color:black;
+    
+    padding-right: 70%;
+    margin-left: 150%;
 }
 
 
@@ -98,20 +102,18 @@ h3{
         font-style: normal;
         list-style-type: none;
         right:5%;
-        top: 20%;
         padding: 0;
         column-gap:5px;
-        margin: 0;
+        margin-top: 5%;
     }
 
     li a{
         float: left;
-        display: inline;
         background-color: red;
         border-radius: 10%;
         color: azure;
         margin-right: 50px;
-        font-size: xx-large;
+        font-size: x-large;
         text-decoration: none;
     }
 
