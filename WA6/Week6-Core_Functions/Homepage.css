@@ -1,83 +1,89 @@
+
+/* This is where the overall thing that holds the navigation and filters is*/
 .main-nav {
     display: grid;
     grid-template-areas:
-     "nav-brand  nav-menu nav-menu nav-menu nav-menu"
+        "nav-brand  nav-menu nav-menu nav-menu nav-menu"
+        "nav-brand  info-nav info-nav info-nav info-nav"
     ;
-    grid-template-columns: 1fr,1fr,1fr,1fr,1fr;
-    column-gap:5px;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr;
+    column-gap: 5px;
     background-color: black;
     padding: 1rem;
 
 
 }
 
-.main-nav > div.nav-brand {
-    grid-area:nav-brand;
+
+.main-nav>div.nav-brand {
+    grid-area: nav-brand;
     background-color: white;
     text-align: center;
     font-family: "blippo-mn", sans-serif;
-font-weight: 900;
-font-style: normal;
-    width:400px;
+    font-weight: 900;
+    font-style: normal;
+    width: 400px;
     border-radius: 10%;
 }
-
-.background{
-    background-color:mediumspringgreen;
+/* This is where we have the overall background of the website and the containers that hold the informattion*/
+.background {
+    background-color: mediumspringgreen;
     padding-bottom: 2.5%;
-   
+
 }
+/* This is where containers organize the headers, information and pcitures*/
 .content-container {
     display: grid;
     grid-template-areas:
-    
-    "header   header "
-    "info   picture"
+
+        "header   header "
+        "info   picture"
 
     ;
     background-color: rgb(73, 194, 105);
-   font-family: "blippo-mn", sans-serif;
-font-weight: 900;
-font-style: normal;
+    font-family: "blippo-mn", sans-serif;
+    font-weight: 900;
+    font-style: normal;
     margin-bottom: 2.5%;
-    width:500px;
-    padding:10px;
-    grid-gap:20px;
+    width: 500px;
+    padding: 10px;
+    grid-gap: 20px;
 
-    
+
 }
 
 
-.content-container > div.header{
-    grid-area:header;
+.content-container>div.header {
+    grid-area: header;
     text-align: center;
     background-color: #E0115F;
     padding-bottom: 10px;
     padding-top: 10px;
     border-radius: 10%;
-    padding:1rem;
+    padding: 1rem;
 
-   
+
 }
 
-.content-container> div.info{
-grid-area:info;
-font-family: "argent-pixel-cf", sans-serif;
-font-weight: 400;
-font-style: normal;
+.content-container>div.info {
+    grid-area: info;
+    font-family: "argent-pixel-cf", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
 
-.content-container > div.picture{
-    grid-area:picture;
+.content-container>div.picture {
+    grid-area: picture;
     padding-right: 10px;
     background-color: black;
-    
-    
-}
 
-h3{
+
+}
+/* This is used to keep the fonts consistent in the headers*/
+
+h3 {
 
     font-family: "dubbeldik-mn", sans-serif;
     font-weight: 400;
@@ -86,9 +92,10 @@ h3{
 }
 
 
-
+/* This is for larger screen sizes that fit laptops,pcs,etc*/
 
 @media(min-width:761px) {
+    /* This is for things that deal with accessing different pages on the website*/
     .nav-toggle {
         background-color: white;
         display: none;
@@ -96,33 +103,39 @@ h3{
 
     }
 
-     .background-picture{
-    display: flex;
-    position:absolute;
-    height:1000px;
-    width:500px;
-    background-color: black;
-    margin-left:700px;
-    top:200px;
-}
+    .background-picture {
+        display: flex;
+        position: absolute;
+        height: 1000px;
+        width: 500px;
+        background-color: black;
+        margin-left: 700px;
+        top: 200px;
+    }
 
-  .main-nav > ul.nav-menu{
+    .main-nav>ul.nav-menu {
         display: flex;
         background-color: none;
         font-family: "dubbeldik-mn", sans-serif;
         font-weight: 400;
         font-style: normal;
         list-style-type: none;
-        right:5%;
+        right: 5%;
         padding: 0;
-        column-gap:5px;
+        column-gap: 5px;
         margin-top: 5%;
     }
 
-    li a{
+    .main-nav>div.info-nav {
+        display: flex;
+
+
+    }
+
+    li a {
         float: left;
-        padding-left:2px;
-        padding-right:2px;
+        padding-left: 2px;
+        padding-right: 2px;
         background-color: red;
         border-radius: 10%;
         color: azure;
@@ -145,9 +158,9 @@ h3{
 
 
 
-
+/* This is for screen sizes that are smaller like mobile devices*/
 @media(max-width:760px) {
-
+  /* This is for things that deal with accessing different pages on the website*/
     .nav-menu.show {
         display: "block";
         position: absolute;
@@ -261,20 +274,20 @@ h3{
 
 }
 
-h1{
-   font-family: "blippo-mn", sans-serif;
-font-weight: 900;
-font-style: normal; 
+h1 {
+    font-family: "blippo-mn", sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
-h2{
-   font-family: "blippo-mn", sans-serif;
-font-weight: 900;
-font-style: normal; 
+h2 {
+    font-family: "blippo-mn", sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }
 
-h3{
-   font-family: "blippo-mn", sans-serif;
-font-weight: 900;
-font-style: normal; 
+h3 {
+    font-family: "blippo-mn", sans-serif;
+    font-weight: 900;
+    font-style: normal;
 }

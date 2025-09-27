@@ -1,3 +1,5 @@
+
+/* This is where the overall thing that holds the navigation and filters is*/
 .main-nav{
 display: grid;
 grid-template-areas: 
@@ -21,6 +23,8 @@ padding: 1rem;
    border-radius: 10%;
 }
 
+/* This is mainly to give a distinction between the containers that hold the information and just the background of the website.
+There are multiple backgrounds so that they are ordered in rows while also having 3 columns*/
 .background{
     display: flex;
     column-gap: 50px;
@@ -37,7 +41,7 @@ padding: 1rem;
     padding-bottom: 20px;
 }
 
-
+/* This is where the title and informattion will be stored and organized*/
 .content-container {
     display: grid;
     grid-area: content-container;
@@ -81,8 +85,9 @@ font-style: normal;
 
 
 
-
+/* This is made for screens that might be for devices like laptops,pcs, etc*/
 @media(min-width:761px) {
+   /* This is for things that deal with accessing different pages on the website*/
     .nav-toggle {
         background-color: white;
         display: none;
@@ -128,10 +133,10 @@ font-style: normal;
 }
 
 
-
+/* This is for screens that have a smaller size such as mobile devices*/
 
 @media(max-width:760px) {
-
+   /* This is for things that deal with accessing different pages on the website*/
     .nav-menu.show {
         display: "block";
         position: absolute;
@@ -245,6 +250,7 @@ font-style: normal;
 
 }
 
+/* This is To just keep the fonts constent in the headers*/
 h1{
    font-family: "blippo-mn", sans-serif;
 font-weight: 900;
