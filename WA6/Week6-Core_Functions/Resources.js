@@ -45,3 +45,5 @@ document.addEventListener('click', (e) => {
 
     }
 })
+
+/*make sure to add not only filters but also buttons for more information if the user wants it */
