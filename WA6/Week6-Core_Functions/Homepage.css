@@ -27,6 +27,7 @@
 }
 /* This is where we have the overall background of the website and the containers that hold the informattion*/
 .background {
+    height:1500px;
     background-color: mediumspringgreen;
     padding-bottom: 2.5%;
 
