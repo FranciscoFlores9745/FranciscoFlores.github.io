@@ -115,6 +115,7 @@ h3 {
 
     .main-nav>ul.nav-menu {
         display: flex;
+        grid-area: nav-menu;
         background-color: none;
         font-family: "dubbeldik-mn", sans-serif;
         font-weight: 400;
@@ -125,13 +126,7 @@ h3 {
         column-gap: 5px;
         margin-top: 5%;
     }
-
-    .main-nav>div.info-nav {
-        display: flex;
-
-
-    }
-
+    /*This is the buttons that link to other pages*/
     li a {
         float: left;
         padding-left: 2px;
@@ -153,6 +148,53 @@ h3 {
         background-color: greenyellow;
         color: black;
     }
+
+
+       /*This is the fitler buttons*/
+
+     .filter-toggle {
+        background-color: white;
+        display: none;
+        padding: .5rem;
+
+    }
+    .main-nav>ul.info-nav {
+       display: flex;
+       grid-area:info-nav;
+        background-color: none;
+        list-style-type: none;
+        right: 5%;
+        padding: 0;
+        column-gap: 5px;
+        margin-top: 5%;
+    }
+
+    li button{
+        float: left;
+        padding-left: 2px;
+        padding-right: 2px;
+        background-color: orchid;
+        border-radius: 10%;
+        color: azure;
+        margin-right: 50px;
+        font-size: medium;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+        li button:hover {
+        background-color: cyan;
+        color: black;
+    }
+
+    li button:focus {
+        background-color: cyan;
+        color: black;
+    }
+
+
 
 }
 
@@ -243,7 +285,86 @@ h3 {
     }
 
 
-    span.open {
+        .info-nav.show {
+        display: "block";
+        position: absolute;
+        background-color: whitesmoke;
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+        top: 0;
+        right: 0;
+        margin-top: 6rem;
+        margin-right: 1rem;
+        border-radius: 10%;
+        list-style-type: none;
+        row-gap: 0;
+
+    }
+
+
+
+    li button {
+        display: block;
+        background-color: whitesmoke;
+        color: black;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        border-radius: 10%;
+        font-style: normal;
+        height: 2rem;
+    }
+
+    li button:hover {
+        display: block;
+        background-color: palevioletred;
+        color: black;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        height: 2rem;
+    }
+
+    li button:focus {
+        display: block;
+        background-color: palevioletred;
+        color: black;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        height: 2rem;
+    }
+
+
+
+    .info-nav.hide {
+        display: none;
+    }
+
+    .filter-toggle {
+        background-color: orchid;
+        display: block;
+        padding: .5rem;
+
+    }
+
+    .filter-toggle:hover {
+        display: block;
+        background-color: cyan;
+        padding: .5rem;
+    }
+
+    .filter-toggle:focus {
+        display: block;
+        background-color: cyan;
+        padding: .5rem;
+    }
+
+
+    .spanMenu.open {
         background-color: whitesmoke;
         display: block;
         width: 90%;
@@ -255,7 +376,7 @@ h3 {
     }
 
 
-    span.close {
+    .spanMenu.close {
         border-radius: 10%;
         background-color: black;
         rotate: 90deg;
@@ -267,6 +388,33 @@ h3 {
         transition: .5s;
         row-gap: normal;
     }
+
+
+        .spanFilter.open {
+        background-color: whitesmoke;
+        display: block;
+        width: 90%;
+        height: 10%;
+        padding: 2px;
+        margin-top: 10%;
+        transition: .5s;
+        border-radius: 10%;
+    }
+
+
+    .spanFilter.close {
+        border-radius: 10%;
+        background-color: black;
+        rotate: 90deg;
+        display: block;
+        width: 90%;
+        height: 10%;
+        padding: 2px;
+        margin-right: 1rem;
+        transition: .5s;
+        row-gap: normal;
+    }
+
 
 
 

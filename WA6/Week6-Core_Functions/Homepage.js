@@ -1,14 +1,23 @@
 const navToggle = document.querySelector('.nav-toggle');
+const filterToggle = document.querySelector('.filter-toggle');
 const navMenu = document.querySelector('.nav-menu');
-const navBurger = document.querySelectorAll('span');
+const infoNav = document.querySelector('.info-nav');
+const navBurger = document.querySelectorAll('spanMenu');
+const navBurger2 = document.querySelectorAll('spanFilter');
 
 
-let toggle = false;
+let toggle1 = false;
+let toggle2 =false;
 /* This is for the look of the hamburger menu and also its function so that you can access other pages on smaller screens, but to also show the user that it is
 working as intended*/
 
 navToggle.addEventListener('click', showMenu);
 
+filterToggle.addEventListener('click', showFilter);
+
+
+
+/* Hamburger Menu for the Pages */
 function showMenu() {
     navMenu.classList.toggle("show");
     navBurger.forEach(span => {
@@ -21,22 +30,22 @@ function showMenu() {
     })
 
 
-    if (toggle == false) {
+    if (toggle1 == false) {
         document.getElementById('aria-expanded').setAttribute('aria-label', 'Close navigation menu')
-        toggle = true;
+        toggle1 = true;
     }
     else {
         document.getElementById('aria-expanded').setAttribute('aria-label', 'Toggle navigation menu')
-        toggle = false;
+        toggle1 = false;
     }
 
 
 }
 
 document.addEventListener('click', (e) => {
-    if ((!navMenu.contains(e.target) && !navToggle.contains(e.target)) && toggle == true) {
+    if ((!navMenu.contains(e.target) && !navToggle.contains(e.target)) && toggle1 == true) {
 
-        toggle = false;
+        toggle1 = false;
         document.getElementById('aria-expanded').setAttribute('aria-label', 'Toggle navigation menu')
         navMenu.classList.toggle("hide");
         navBurger.forEach(span => {
@@ -45,9 +54,49 @@ document.addEventListener('click', (e) => {
 
     }
 })
+
+/* Hamburger Menu for the Filters */
+function showFilter() {
+    infoNav.classList.toggle("show");
+    navBurger2.forEach(span => {
+        span.classList.toggle("open");
+    })
+
+    infoNav.classList.toggle("hide");
+    navBurger2.forEach(span => {
+        span.classList.toggle("close");
+    })
+
+
+    if (toggle2 == false) {
+        document.getElementById('aria-expanded').setAttribute('aria-label', 'Close navigation menu')
+        toggle2 = true;
+    }
+    else {
+        document.getElementById('aria-expanded').setAttribute('aria-label', 'Toggle navigation menu')
+        toggle2 = false;
+    }
+
+
+}
+
+document.addEventListener('click', (e) => {
+    if ((!infoNav.contains(e.target) && !filterToggle.contains(e.target)) && toggle2 == true) {
+
+        toggle2 = false;
+        document.getElementById('aria-expanded').setAttribute('aria-label', 'Toggle navigation menu')
+        infoNav.classList.toggle("hide");
+        navBurger2.forEach(span => {
+            span.classList.toggle("close");
+        })
+
+    }
+})
+
+
 /* This is for the filters, this makes sure that when certain things are checked off, that it will hide or show the information that the user chose*/
-const filterButtons = document.querySelectorAll('.info-nav button');
-const photoCards = document.querySelectorAll('.content');
+const filterButtons = document.querySelectorAll('.info-nav li button');
+const contentInfo = document.querySelectorAll('.content-container');
 
 
 // Button filters
@@ -55,40 +104,30 @@ filterButtons.forEach(button => {
 
     button.addEventListener('click', (event) => {
         const filterValue = event.target.textContent.toLowerCase();
-        filterPhotos(filterValue);
-
-        /*alert(filterValue);*/
-
-
-        function filterPhotos(category) {
-            number = 0;
-            photoCards.forEach(card => {
+        filterContent(filterValue);
+        console.log(filterValue);
 
 
+
+        function filterContent(category) {
+           contentInfo.forEach(card => {
                 if (category === 'all' || card.dataset.catagory === category) {
-                    number++;
-                    console.log(card.dataset.catagory)
-                    card.classList.toggle('block');
+                    console.log(card.dataset.catagory);
+                    console.log(category);
+
+                    card.classList.toggle('grid');
+                    //card.style.display = 'grid'
                     card.style.opacity = 100;
-                    setTimeout(() => card.style.display = 'block', 500);
-                    if (card.style.color == 'red') {
-                        card.style.color = 'black'
-                    } else {
-                        card.style.color = 'red'
-                    }
-                    document.getElementById("Photos").innerText = "#Photos: " + number;
+                    setTimeout(() => card.style.display = 'grid',500);
 
-                } else {
+                } else if(category === 'none'|| card.dataset.catagory !== category){
 
-                    console.log(card.dataset.catagory)
+                    console.log(card.dataset.catagory);
+                    console.log(category);
                     card.classList.toggle('none');
+                    //card.style.display = 'none'
                     card.style.opacity = 0;
-                    setTimeout(() => card.style.display = 'none', 500);
-                    if (card.style.color == 'black') {
-                        card.style.color = 'red'
-                    } else {
-                        card.style.color = 'black'
-                    }
+                    setTimeout(() => card.style.display = 'none',500);
 
                 }
             });
@@ -98,6 +137,7 @@ filterButtons.forEach(button => {
 
 
 });
+
 
 
 /*make sure to add not only filters but also buttons for more information if the user wants it */
