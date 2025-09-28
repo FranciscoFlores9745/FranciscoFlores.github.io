@@ -11,7 +11,7 @@ My plan is to now not only add filters to the two pages, but to also make sure t
 
 Another piece of feedback was to maybe make the filters act like a checklist, that way you can either choose 1 thing to focus on, or just filter out one thing, that way the information that you want stays while the other information disappears. 
 
-Other than that the rest of the additions I made were effective and were a welcomed addition to the use of the user.
+Other than that the rest of the additions I made were effective and were welcomed by the user.
 
 
 My plan to finalize this is to update my filter function so that it can do dynamic checklist type filtering, where you can choose multiple things instead of being forced to pick one to filter.
