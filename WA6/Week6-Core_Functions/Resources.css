@@ -3,7 +3,8 @@
 .main-nav{
 display: grid;
 grid-template-areas: 
-"nav-brand nav-menu"
+"nav-brand nav-menu nav-menu"
+"nav-brand info-nav info-nav"
 ;
 grid-template-columns: 1fr,2fr;
 background-color: black;
@@ -25,6 +26,12 @@ padding: 1rem;
 
 /* This is mainly to give a distinction between the containers that hold the information and just the background of the website.
 There are multiple backgrounds so that they are ordered in rows while also having 3 columns*/
+.overall{
+      width:auto;
+      height:500px;
+     background-color:lightskyblue;
+     padding-bottom: 20px;
+}
 .background{
     display: flex;
     column-gap: 50px;
@@ -83,6 +90,42 @@ font-style: normal;
 
 }
 
+.content-container> div button{
+    grid-area:More-info;
+    background-color: rgb(252, 45, 255);
+    text-decoration: none;
+     font-family: "argent-pixel-cf", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+
+}
+
+.content-container> div button:hover{
+    grid-area:More-info;
+    background-color: rgb(72, 226, 177);
+    text-decoration: none;
+     font-family: "argent-pixel-cf", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+
+}
+
+.content-container> div button:focus{
+    grid-area:More-info;
+    background-color: rgb(72, 226, 177);
+    text-decoration: none;
+     font-family: "argent-pixel-cf", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+
+}
+
 
 
 /* This is made for screens that might be for devices like laptops,pcs, etc*/
@@ -127,6 +170,50 @@ font-style: normal;
 
     li a:focus {
         background-color: greenyellow;
+        color: black;
+    }
+
+    /*This is the filter buttons*/
+
+    .filter-toggle {
+        background-color: white;
+        display: none;
+        padding: .5rem;
+
+    }
+    .main-nav>ul.info-nav {
+       display: flex;
+       grid-area:info-nav;
+        background-color: none;
+        list-style-type: none;
+        right: 5%;
+        padding: 0;
+        column-gap: 5px;
+        margin-top: 5%;
+    }
+
+    li button{
+        float: left;
+        padding-left: 2px;
+        padding-right: 2px;
+        background-color: orchid;
+        border-radius: 10%;
+        color: azure;
+        margin-right: 50px;
+        font-size: medium;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+        li button:hover {
+        background-color: cyan;
+        color: black;
+    }
+
+    li button:focus {
+        background-color: cyan;
         color: black;
     }
 
@@ -219,7 +306,93 @@ font-style: normal;
     }
 
 
-    span.open {
+ /*The filter buttons*/
+
+
+        .info-nav.show {
+        display: "block";
+        position: absolute;
+        background-color: whitesmoke;
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+        top: 0;
+        right: 0;
+        margin-top: 6rem;
+        margin-right: 1rem;
+        border-radius: 10%;
+        list-style-type: none;
+        row-gap: 0;
+
+    }
+
+
+
+    li button {
+        display: block;
+        background-color: whitesmoke;
+        color: black;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        border-radius: 10%;
+        font-style: normal;
+        height: 2rem;
+        
+    }
+
+    li button:hover {
+        display: block;
+        background-color: palevioletred;
+        color: black;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        height: 2rem;
+        
+    }
+
+    li button:focus {
+        display: block;
+        background-color: palevioletred;
+        color: black;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        height: 2rem;
+    }
+
+
+
+    .info-nav.hide {
+        display: none;
+    }
+
+    .filter-toggle {
+        background-color: orchid;
+        display: block;
+        padding: .5rem;
+          width: 50px;
+        height: 50px;
+
+    }
+
+    .filter-toggle:hover {
+        display: block;
+        background-color: cyan;
+        padding: .5rem;
+    }
+
+    .filter-toggle:focus {
+        display: block;
+        background-color: cyan;
+        padding: .5rem;
+    }
+
+
+    .spanMenu.open {
         background-color: whitesmoke;
         display: block;
         width: 90%;
@@ -231,7 +404,7 @@ font-style: normal;
     }
 
 
-    span.close {
+    .spanMenu.close {
         border-radius: 10%;
         background-color: black;
         rotate: 90deg;
@@ -243,6 +416,33 @@ font-style: normal;
         transition: .5s;
         row-gap: normal;
     }
+
+
+        .spanFilter.open {
+        background-color: whitesmoke;
+        display: block;
+        width: 90%;
+        height: 10%;
+        padding: 2px;
+        margin-top: 10%;
+        transition: .5s;
+        border-radius: 10%;
+    }
+
+
+    .spanFilter.close {
+        border-radius: 10%;
+        background-color: black;
+        rotate: 90deg;
+        display: block;
+        width: 90%;
+        height: 10%;
+        padding: 2px;
+        margin-right: 1rem;
+        transition: .5s;
+        row-gap: normal;
+    }
+
 
 
 

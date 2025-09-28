@@ -2,8 +2,8 @@ const navToggle = document.querySelector('.nav-toggle');
 const filterToggle = document.querySelector('.filter-toggle');
 const navMenu = document.querySelector('.nav-menu');
 const infoNav = document.querySelector('.info-nav');
-const navBurger = document.querySelectorAll('spanMenu');
-const navBurger2 = document.querySelectorAll('spanFilter');
+const navBurger = document.querySelectorAll('.spanMenu');
+const navBurger2 = document.querySelectorAll('.spanFilter');
 
 
 let toggle1 = false;
@@ -20,13 +20,13 @@ filterToggle.addEventListener('click', showFilter);
 /* Hamburger Menu for the Pages */
 function showMenu() {
     navMenu.classList.toggle("show");
-    navBurger.forEach(span => {
-        span.classList.toggle("open");
+    navBurger.forEach(span1 => {
+        span1.classList.toggle("open");
     })
 
     navMenu.classList.toggle("hide");
-    navBurger.forEach(span => {
-        span.classList.toggle("close");
+    navBurger.forEach(span1 => {
+        span1.classList.toggle("close");
     })
 
 
@@ -48,8 +48,8 @@ document.addEventListener('click', (e) => {
         toggle1 = false;
         document.getElementById('aria-expanded').setAttribute('aria-label', 'Toggle navigation menu')
         navMenu.classList.toggle("hide");
-        navBurger.forEach(span => {
-            span.classList.toggle("close");
+        navBurger.forEach(span1 => {
+            span1.classList.toggle("close");
         })
 
     }
@@ -58,22 +58,22 @@ document.addEventListener('click', (e) => {
 /* Hamburger Menu for the Filters */
 function showFilter() {
     infoNav.classList.toggle("show");
-    navBurger2.forEach(span => {
-        span.classList.toggle("open");
+    navBurger2.forEach(span2 => {
+        span2.classList.toggle("open");
     })
 
     infoNav.classList.toggle("hide");
-    navBurger2.forEach(span => {
-        span.classList.toggle("close");
+    navBurger2.forEach(span2 => {
+        span2.classList.toggle("close");
     })
 
 
     if (toggle2 == false) {
-        document.getElementById('aria-expanded').setAttribute('aria-label', 'Close navigation menu')
+        document.getElementById('aria-expanded').setAttribute('aria-label', 'Close filter menu')
         toggle2 = true;
     }
     else {
-        document.getElementById('aria-expanded').setAttribute('aria-label', 'Toggle navigation menu')
+        document.getElementById('aria-expanded').setAttribute('aria-label', 'Toggle filter menu')
         toggle2 = false;
     }
 
@@ -86,8 +86,8 @@ document.addEventListener('click', (e) => {
         toggle2 = false;
         document.getElementById('aria-expanded').setAttribute('aria-label', 'Toggle navigation menu')
         infoNav.classList.toggle("hide");
-        navBurger2.forEach(span => {
-            span.classList.toggle("close");
+        navBurger2.forEach(span2 => {
+            span2.classList.toggle("close");
         })
 
     }

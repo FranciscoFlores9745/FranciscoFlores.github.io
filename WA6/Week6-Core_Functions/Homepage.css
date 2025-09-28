@@ -27,7 +27,7 @@
 }
 /* This is where we have the overall background of the website and the containers that hold the informattion*/
 .background {
-    height:1500px;
+    height:1750px;
     background-color: mediumspringgreen;
     padding-bottom: 2.5%;
 
@@ -39,6 +39,7 @@
 
         "header   header "
         "info   picture"
+        "More-info More-info"
 
     ;
     background-color: rgb(73, 194, 105);
@@ -79,6 +80,43 @@
     grid-area: picture;
     padding-right: 10px;
     background-color: black;
+
+
+}
+
+.content-container> div button{
+    grid-area:More-info;
+    background-color: rgb(241, 105, 87);
+    text-decoration: none;
+     font-family: "argent-pixel-cf", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+
+}
+
+.content-container> div button:hover{
+    grid-area:More-info;
+    background-color: rgb(163, 180, 255);
+    text-decoration: none;
+     font-family: "argent-pixel-cf", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+
+}
+
+
+.content-container> div button:focus        {
+    grid-area:More-info;
+    background-color: rgb(163, 180, 255);
+    text-decoration: none;
+     font-family: "argent-pixel-cf", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
 
 
 }
@@ -285,6 +323,8 @@ h3 {
         padding: .5rem;
     }
 
+    /*The filter buttons*/
+
 
         .info-nav.show {
         display: "block";
@@ -349,6 +389,8 @@ h3 {
         background-color: orchid;
         display: block;
         padding: .5rem;
+          width: 50px;
+        height: 50px;
 
     }
 
