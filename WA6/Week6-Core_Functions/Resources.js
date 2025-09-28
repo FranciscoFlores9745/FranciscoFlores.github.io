@@ -69,11 +69,11 @@ function showFilter() {
 
 
     if (toggle2 == false) {
-        document.getElementById('aria-expanded').setAttribute('aria-label', 'Close navigation menu')
+        document.getElementById('filter-expanded').setAttribute('aria-label', 'Close navigation menu')
         toggle2 = true;
     }
     else {
-        document.getElementById('aria-expanded').setAttribute('aria-label', 'Toggle navigation menu')
+        document.getElementById('filter-expanded').setAttribute('aria-label', 'Toggle navigation menu')
         toggle2 = false;
     }
 
@@ -84,7 +84,7 @@ document.addEventListener('click', (e) => {
     if ((!infoNav.contains(e.target) && !filterToggle.contains(e.target)) && toggle2 == true) {
 
         toggle2 = false;
-        document.getElementById('aria-expanded').setAttribute('aria-label', 'Toggle navigation menu')
+        document.getElementById('filter-expanded').setAttribute('aria-label', 'Toggle navigation menu')
         infoNav.classList.toggle("hide");
         navBurger2.forEach(span => {
             span.classList.toggle("close");
