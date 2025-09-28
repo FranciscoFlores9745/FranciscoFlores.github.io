@@ -98,7 +98,8 @@ document.addEventListener('click', (e) => {
 const filterButtons = document.querySelectorAll('.info-nav li button');
 const contentInfo = document.querySelectorAll('.content-container');
 
-
+active=0;
+all=0;
 // Button filters
 filterButtons.forEach(button => {
 
@@ -119,8 +120,10 @@ filterButtons.forEach(button => {
                     //card.style.display = 'grid'
                     card.style.opacity = 100;
                     setTimeout(() => card.style.display = 'grid',500);
+                    console.log(active);
+                    all++;
 
-                } else if(category === 'none'|| card.dataset.catagory !== category){
+                } else if(category === 'none'|| card.dataset.catagory !== category&&active<=4){
 
                     console.log(card.dataset.catagory);
                     console.log(category);
@@ -128,6 +131,10 @@ filterButtons.forEach(button => {
                     //card.style.display = 'none'
                     card.style.opacity = 0;
                     setTimeout(() => card.style.display = 'none',500);
+                    active++;
+
+                } if(category === 'none'||category==='all'||all===6){
+                    active=0;
 
                 }
             });
