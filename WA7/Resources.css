@@ -1,0 +1,470 @@
+
+/* This is where the overall thing that holds the navigation and filters is*/
+.main-nav{
+display: grid;
+grid-template-areas: 
+"nav-brand nav-menu nav-menu"
+"nav-brand info-nav info-nav"
+;
+grid-template-columns: 1fr,2fr;
+background-color: black;
+font-family: "blippo-mn", sans-serif;
+font-weight: 900;
+font-style: normal;
+padding: 1rem;
+
+
+}
+
+.main-nav > div.nav-brand{
+    grid-area:"nav-brand";
+    text-align: center;
+    background-color: white;
+    width:400px;
+   border-radius: 10%;
+}
+
+/* This is mainly to give a distinction between the containers that hold the information and just the background of the website.
+There are multiple backgrounds so that they are ordered in rows while also having 3 columns*/
+.overall{
+      width:auto;
+      height:500px;
+     background-color:lightskyblue;
+     padding-bottom: 20px;
+}
+.background{
+    display: flex;
+    column-gap: 50px;
+    width:auto;
+    background-color:lightskyblue;
+    padding-bottom: 20px;
+}
+
+.background2{
+    display: flex;
+    column-gap: 50px;
+    width:auto;
+    background-color:lightskyblue;
+    padding-bottom: 20px;
+}
+
+/* This is where the title and informattion will be stored and organized*/
+.content-container {
+    display: grid;
+    grid-area: content-container;
+    grid-template-areas:
+    "header"
+    "info"
+    ;
+    background-color: rgb(100, 155, 200);
+  font-family: "blippo-mn", sans-serif;
+font-weight: 900;
+font-style: normal;
+    margin-bottom: 2.5%;
+    column-gap:10%;
+    width:40%;
+    padding:10px;
+    grid-gap:10px;
+
+    
+}
+
+.content-container> div.header{
+    grid-area: header;
+    text-align: center;
+    background-color:darkslateblue;
+    color:rgb(250, 241, 188);
+    padding:20px 0;
+    border-radius: 10%;
+
+}
+
+
+.content-container > div.info{
+    grid-area:info;
+    padding:20px 0;
+    font-family: "argent-pixel-cf", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   
+
+}
+
+.content-container> div button{
+    grid-area:More-info;
+    background-color: rgb(252, 45, 255);
+    text-decoration: none;
+     font-family: "argent-pixel-cf", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+
+}
+
+.content-container> div button:hover{
+    grid-area:More-info;
+    background-color: rgb(72, 226, 177);
+    text-decoration: none;
+     font-family: "argent-pixel-cf", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+
+}
+
+.content-container> div button:focus{
+    grid-area:More-info;
+    background-color: rgb(72, 226, 177);
+    text-decoration: none;
+     font-family: "argent-pixel-cf", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+
+
+}
+
+
+
+/* This is made for screens that might be for devices like laptops,pcs, etc*/
+@media(min-width:761px) {
+   /* This is for things that deal with accessing different pages on the website*/
+    .nav-toggle {
+        background-color: white;
+        display: none;
+        padding: .5rem;
+
+    }
+
+  .main-nav > ul.nav-menu{
+        display: flex;
+        background-color: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        list-style-type: none;
+        right:5%;
+        padding: 0;
+        column-gap:5px;
+        margin-top: 5%;
+    }
+
+    li a{
+        float: left;
+        background-color: red;
+        border-radius: 10%;
+        color: azure;
+        margin-right: 50px;
+        font-size: x-large;
+        text-decoration: none;
+        padding-left:2px;
+        padding-right:2px;
+    }
+
+    li a:hover {
+        background-color: greenyellow;
+        color: black;
+    }
+
+    li a:focus {
+        background-color: greenyellow;
+        color: black;
+    }
+
+    /*This is the filter buttons*/
+
+    .filter-toggle {
+        background-color: white;
+        display: none;
+        padding: .5rem;
+
+    }
+    .main-nav>ul.info-nav {
+       display: flex;
+       grid-area:info-nav;
+        background-color: none;
+        list-style-type: none;
+        right: 5%;
+        padding: 0;
+        column-gap: 5px;
+        margin-top: 5%;
+    }
+
+    li button{
+        float: left;
+        padding-left: 2px;
+        padding-right: 2px;
+        background-color: orchid;
+        border-radius: 10%;
+        color: azure;
+        margin-right: 50px;
+        font-size: medium;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+        li button:hover {
+        background-color: cyan;
+        color: black;
+    }
+
+    li button:focus {
+        background-color: cyan;
+        color: black;
+    }
+
+}
+
+
+/* This is for screens that have a smaller size such as mobile devices*/
+
+@media(max-width:760px) {
+   /* This is for things that deal with accessing different pages on the website*/
+    .nav-menu.show {
+        display: "block";
+        position: absolute;
+        background-color: whitesmoke;
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+        top: 0;
+        right: 0;
+        margin-top: 6rem;
+        margin-right: 1rem;
+        border-radius: 10%;
+        list-style-type: none;
+        row-gap: 0;
+
+    }
+
+
+
+    li a {
+        display: block;
+        background-color: whitesmoke;
+        color: black;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        border-radius: 10%;
+        font-style: normal;
+        height: 2rem;
+    }
+
+    li a:hover {
+        display: block;
+        background-color: goldenrod;
+        color: black;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        height: 2rem;
+    }
+
+    li a:focus {
+        display: block;
+        background-color: goldenrod;
+        color: black;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        height: 2rem;
+    }
+
+
+
+    .nav-menu.hide {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block;
+        background-color: #E0115F;
+        border-radius: 10%;
+        padding: .5rem;
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .nav-toggle:hover {
+        display: block;
+        background-color: greenyellow;
+        padding: .5rem;
+    }
+
+    .nav-toggle:focus {
+        display: block;
+        background-color: greenyellow;
+        padding: .5rem;
+    }
+
+
+ /*The filter buttons*/
+
+
+        .info-nav.show {
+        display: "block";
+        position: absolute;
+        background-color: whitesmoke;
+        flex-direction: column;
+        padding-left: 0;
+        padding-right: 0;
+        top: 0;
+        right: 0;
+        margin-top: 6rem;
+        margin-right: 1rem;
+        border-radius: 10%;
+        list-style-type: none;
+        row-gap: 0;
+
+    }
+
+
+
+    li button {
+        display: block;
+        background-color: whitesmoke;
+        color: black;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        border-radius: 10%;
+        font-style: normal;
+        height: 2rem;
+        
+    }
+
+    li button:hover {
+        display: block;
+        background-color: palevioletred;
+        color: black;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        height: 2rem;
+        
+    }
+
+    li button:focus {
+        display: block;
+        background-color: palevioletred;
+        color: black;
+        text-decoration: none;
+        font-family: "dubbeldik-mn", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        height: 2rem;
+    }
+
+
+
+    .info-nav.hide {
+        display: none;
+    }
+
+    .filter-toggle {
+        background-color: orchid;
+        display: block;
+        padding: .5rem;
+          width: 50px;
+        height: 50px;
+
+    }
+
+    .filter-toggle:hover {
+        display: block;
+        background-color: cyan;
+        padding: .5rem;
+    }
+
+    .filter-toggle:focus {
+        display: block;
+        background-color: cyan;
+        padding: .5rem;
+    }
+
+
+    .spanMenu.open {
+        background-color: whitesmoke;
+        display: block;
+        width: 90%;
+        height: 10%;
+        padding: 2px;
+        margin-top: 10%;
+        transition: .5s;
+        border-radius: 10%;
+    }
+
+
+    .spanMenu.close {
+        border-radius: 10%;
+        background-color: black;
+        rotate: 90deg;
+        display: block;
+        width: 90%;
+        height: 10%;
+        padding: 2px;
+        margin-right: 1rem;
+        transition: .5s;
+        row-gap: normal;
+    }
+
+
+        .spanFilter.open {
+        background-color: whitesmoke;
+        display: block;
+        width: 90%;
+        height: 10%;
+        padding: 2px;
+        margin-top: 10%;
+        transition: .5s;
+        border-radius: 10%;
+    }
+
+
+    .spanFilter.close {
+        border-radius: 10%;
+        background-color: black;
+        rotate: 90deg;
+        display: block;
+        width: 90%;
+        height: 10%;
+        padding: 2px;
+        margin-right: 1rem;
+        transition: .5s;
+        row-gap: normal;
+    }
+
+
+
+
+
+
+}
+
+/* This is To just keep the fonts constent in the headers*/
+h1{
+   font-family: "blippo-mn", sans-serif;
+font-weight: 900;
+font-style: normal; 
+}
+
+h2{
+   font-family: "blippo-mn", sans-serif;
+font-weight: 900;
+font-style: normal; 
+}
+
+h3{
+   font-family: "blippo-mn", sans-serif;
+font-weight: 900;
+font-style: normal; 
+}
