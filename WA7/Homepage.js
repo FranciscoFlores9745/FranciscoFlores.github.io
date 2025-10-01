@@ -152,11 +152,14 @@ filterButtons.forEach(button => {
 
 // Save user's theme choice
 let btn = document.querySelector('#theme').addEventListener('click', theme);
-cick =0;
+click =0;
+
+//This is where it determines the theme of the page when the persons clicks the button.
 function theme(){
 
     click++;
     console.log("theme works");
+    console.log(click);
     if(click==1){
     setTheme('dark');
     }
@@ -166,6 +169,7 @@ function theme(){
     }
 }
 
+//This sets the theme in that they chose.
 function setTheme(theme) {
     let inTheme = theme;
     if(inTheme == 'dark'){
@@ -182,3 +186,7 @@ window.addEventListener('load', function() {
     const savedTheme = localStorage.getItem('userTheme') || 'light';
     document.body.className = savedTheme;
 });
+
+/*The data that I am storing is the information of the theme that the user chose. And this data is 
+necessary because it holds the users preference on how they would like to use the website. This allows
+users to control the look of the site when it comes to fonts and the background.*/
