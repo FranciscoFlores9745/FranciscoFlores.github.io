@@ -507,27 +507,27 @@ h3 {
     color: white;
 }
 
-@container background(min-width: 350px) {
+@container back(min-width: 350px) {
     .background-picture {
         display: flex;
         position: absolute;
         height: 1000px;
         width: 500px;
-        background-color: black;
+        background-color: blue;
         margin-left: 700px;
         top: 200px;
     }
 
 }
 
-@container(max-width: 480px) {
+@container back(min-width: 480px) {
 
     .background-picture {
         display: flex;
         position: absolute;
         height: 1000px;
         width: 500px;
-        background-color: black;
+        background-color: yellow;
         margin-left: 700px;
         top: 200px;
     }
