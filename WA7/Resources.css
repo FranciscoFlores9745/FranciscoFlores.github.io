@@ -3,8 +3,8 @@
 .main-nav{
 display: grid;
 grid-template-areas: 
-"nav-brand nav-menu nav-menu"
-"nav-brand info-nav info-nav"
+"nav-brand nav-menu nav-menu Mode"
+"nav-brand info-nav info-nav info-nav"
 ;
 grid-template-columns: 1fr,2fr;
 background-color: black;
@@ -12,6 +12,7 @@ font-family: "blippo-mn", sans-serif;
 font-weight: 900;
 font-style: normal;
 padding: 1rem;
+width: 160%;
 
 
 }
@@ -19,7 +20,7 @@ padding: 1rem;
 .main-nav > div.nav-brand{
     grid-area:"nav-brand";
     text-align: center;
-    background-color: white;
+    background-color: palevioletred;
     width:400px;
    border-radius: 10%;
 }
@@ -27,10 +28,10 @@ padding: 1rem;
 /* This is mainly to give a distinction between the containers that hold the information and just the background of the website.
 There are multiple backgrounds so that they are ordered in rows while also having 3 columns*/
 .overall{
-      width:auto;
-      height:500px;
      background-color:lightskyblue;
      padding-bottom: 20px;
+     height:100%;
+    width:169%;
 }
 .background{
     display: flex;
@@ -467,4 +468,14 @@ h3{
    font-family: "blippo-mn", sans-serif;
 font-weight: 900;
 font-style: normal; 
+}
+
+.light {
+    background-color: white;
+    color: black;
+}
+
+.dark {
+    background-color: black;
+    color: white;
 }

@@ -1,15 +1,17 @@
 
+
 /* This is where the overall thing that holds the navigation and filters is*/
 .main-nav {
     display: grid;
     grid-template-areas:
-        "nav-brand  nav-menu nav-menu nav-menu nav-menu"
-        "nav-brand  info-nav info-nav info-nav info-nav"
+        "nav-brand  nav-menu nav-menu nav-menu nav-menu Mode"
+        "nav-brand  info-nav info-nav info-nav info-nav Login"
     ;
     grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr;
     column-gap: 5px;
     background-color: black;
     padding: 1rem;
+    width: 160%;
 
 
 }
@@ -17,7 +19,7 @@
 
 .main-nav>div.nav-brand {
     grid-area: nav-brand;
-    background-color: white;
+    background-color: palevioletred;
     text-align: center;
     font-family: "blippo-mn", sans-serif;
     font-weight: 900;
@@ -25,13 +27,16 @@
     width: 400px;
     border-radius: 10%;
 }
+
 /* This is where we have the overall background of the website and the containers that hold the informattion*/
 .background {
-    height:1750px;
+    height: 100%;
+    width: 169%;
     background-color: mediumspringgreen;
     padding-bottom: 2.5%;
 
 }
+
 /* This is where containers organize the headers, information and pcitures*/
 .content-container {
     display: grid;
@@ -84,11 +89,11 @@
 
 }
 
-.content-container> div button{
-    grid-area:More-info;
+.content-container>div button {
+    grid-area: More-info;
     background-color: rgb(241, 105, 87);
     text-decoration: none;
-     font-family: "argent-pixel-cf", sans-serif;
+    font-family: "argent-pixel-cf", sans-serif;
     font-weight: 400;
     font-style: normal;
 
@@ -96,11 +101,11 @@
 
 }
 
-.content-container> div button:hover{
-    grid-area:More-info;
+.content-container>div button:hover {
+    grid-area: More-info;
     background-color: rgb(163, 180, 255);
     text-decoration: none;
-     font-family: "argent-pixel-cf", sans-serif;
+    font-family: "argent-pixel-cf", sans-serif;
     font-weight: 400;
     font-style: normal;
 
@@ -109,17 +114,18 @@
 }
 
 
-.content-container> div button:focus        {
-    grid-area:More-info;
+.content-container>div button:focus {
+    grid-area: More-info;
     background-color: rgb(163, 180, 255);
     text-decoration: none;
-     font-family: "argent-pixel-cf", sans-serif;
+    font-family: "argent-pixel-cf", sans-serif;
     font-weight: 400;
     font-style: normal;
 
 
 
 }
+
 /* This is used to keep the fonts consistent in the headers*/
 
 h3 {
@@ -131,25 +137,30 @@ h3 {
 }
 
 
+.background-picture {
+    display: flex;
+    container-name: back;
+    container-type: inline-size;
+    position: absolute;
+    height: 1000px;
+    width: 500px;
+    background-color: black;
+    margin-left: 700px;
+    top: 200px;
+}
+
 /* This is for larger screen sizes that fit laptops,pcs,etc*/
 
 @media(min-width:761px) {
+
+
+
     /* This is for things that deal with accessing different pages on the website*/
     .nav-toggle {
         background-color: white;
         display: none;
         padding: .5rem;
 
-    }
-
-    .background-picture {
-        display: flex;
-        position: absolute;
-        height: 1000px;
-        width: 500px;
-        background-color: black;
-        margin-left: 700px;
-        top: 200px;
     }
 
     .main-nav>ul.nav-menu {
@@ -165,6 +176,7 @@ h3 {
         column-gap: 5px;
         margin-top: 5%;
     }
+
     /*This is the buttons that link to other pages*/
     li a {
         float: left;
@@ -189,17 +201,18 @@ h3 {
     }
 
 
-       /*This is the fitler buttons*/
+    /*This is the fitler buttons*/
 
-     .filter-toggle {
+    .filter-toggle {
         background-color: white;
         display: none;
         padding: .5rem;
 
     }
+
     .main-nav>ul.info-nav {
-       display: flex;
-       grid-area:info-nav;
+        display: flex;
+        grid-area: info-nav;
         background-color: none;
         list-style-type: none;
         right: 5%;
@@ -208,7 +221,7 @@ h3 {
         margin-top: 5%;
     }
 
-    li button{
+    li button {
         float: left;
         padding-left: 2px;
         padding-right: 2px;
@@ -223,7 +236,7 @@ h3 {
         font-style: normal;
     }
 
-        li button:hover {
+    li button:hover {
         background-color: cyan;
         color: black;
     }
@@ -241,7 +254,8 @@ h3 {
 
 /* This is for screen sizes that are smaller like mobile devices*/
 @media(max-width:760px) {
-  /* This is for things that deal with accessing different pages on the website*/
+
+    /* This is for things that deal with accessing different pages on the website*/
     .nav-menu.show {
         display: "block";
         position: absolute;
@@ -326,7 +340,7 @@ h3 {
     /*The filter buttons*/
 
 
-        .info-nav.show {
+    .info-nav.show {
         display: "block";
         position: absolute;
         background-color: whitesmoke;
@@ -389,7 +403,7 @@ h3 {
         background-color: orchid;
         display: block;
         padding: .5rem;
-          width: 50px;
+        width: 50px;
         height: 50px;
 
     }
@@ -433,7 +447,7 @@ h3 {
     }
 
 
-        .spanFilter.open {
+    .spanFilter.open {
         background-color: whitesmoke;
         display: block;
         width: 90%;
@@ -483,12 +497,42 @@ h3 {
     font-style: normal;
 }
 
- .light{
+.light {
     background-color: white;
     color: black;
 }
 
- .dark{
+.dark {
     background-color: black;
     color: white;
 }
+
+@container background(min-width: 350px) {
+    .background-picture {
+        display: flex;
+        position: absolute;
+        height: 1000px;
+        width: 500px;
+        background-color: black;
+        margin-left: 700px;
+        top: 200px;
+    }
+
+}
+
+@container(max-width: 480px) {
+
+    .background-picture {
+        display: flex;
+        position: absolute;
+        height: 1000px;
+        width: 500px;
+        background-color: black;
+        margin-left: 700px;
+        top: 200px;
+    }
+
+}
+
+
+/*Add a "login" button so that theirb username and password is saved*/
