@@ -139,14 +139,9 @@ h3 {
 
 .background-picture {
     display: flex;
-    container-name: back;
-    container-type:inline-size;
-    position: absolute;
     height: 1000px;
     width: 500px;
     background-color: black;
-    margin-left: 700px;
-    top: 200px;
 }
 
 /* This is for larger screen sizes that fit laptops,pcs,etc*/
@@ -507,7 +502,9 @@ h3 {
     color: white;
 }
 
-@container back(min-width: 350px) {
+
+
+/*@container  back(min-width: 350px) {
     .background-picture {
         display: flex;
         position: absolute;
@@ -532,7 +529,7 @@ h3 {
         top: 200px;
     }
 
-}
+} */
 
 
 /*Add a "login" button so that theirb username and password is saved*/
