@@ -2,16 +2,17 @@
 .main-nav {
     display: grid;
     grid-template-areas:
-        "nav-brand nav-menu nav-menu Mode"
-        "nav-brand info-nav info-nav info-nav"
+        "nav-brand nav-menu  Mode"
+        "nav-brand info-nav  info-nav"
     ;
-    grid-template-columns: 1fr, 2fr;
+    grid-template-columns: 1fr, 1fr, 1fr;
     background-color: black;
     font-family: "blippo-mn", sans-serif;
     font-weight: 900;
     font-style: normal;
     padding: 1rem;
     width: 100%;
+    column-gap:5px;
 
 
 }
@@ -37,6 +38,7 @@ There are multiple backgrounds so that they are ordered in rows while also havin
     column-gap: 50px;
     background-color: #87cefa;
     padding-bottom: 20%;
+    width:100%;
 }
 
 .background2 {
@@ -128,7 +130,7 @@ There are multiple backgrounds so that they are ordered in rows while also havin
 
 
 /* This is made for screens that might be for devices like laptops,pcs, etc*/
-@media(min-width:761px) {
+@media(min-width:769px) {
 
     /* This is for things that deal with accessing different pages on the website*/
     .nav-toggle {
@@ -140,6 +142,7 @@ There are multiple backgrounds so that they are ordered in rows while also havin
 
     .main-nav>ul.nav-menu {
         display: flex;
+        grid-area:nav-menu;
         background-color: none;
         font-family: "dubbeldik-mn", sans-serif;
         font-weight: 400;
@@ -152,11 +155,9 @@ There are multiple backgrounds so that they are ordered in rows while also havin
     }
 
     li a {
-        float: left;
         background-color: red;
         border-radius: 10%;
         color: azure;
-        margin-right: 50px;
         font-size: x-large;
         text-decoration: none;
         padding-left: 2px;
@@ -194,13 +195,13 @@ There are multiple backgrounds so that they are ordered in rows while also havin
     }
 
     li button {
-        float: left;
+        
         padding-left: 2px;
         padding-right: 2px;
         background-color: orchid;
         border-radius: 10%;
         color: azure;
-        margin-right: 50px;
+        margin-right: 10px;
         font-size: medium;
         text-decoration: none;
         font-family: "dubbeldik-mn", sans-serif;
@@ -217,13 +218,14 @@ There are multiple backgrounds so that they are ordered in rows while also havin
         background-color: cyan;
         color: black;
     }
+    
 
 }
 
 
 /* This is for screens that have a smaller size such as mobile devices*/
 
-@media(max-width:760px) {
+@media(max-width:768px) {
 
     /* This is for things that deal with accessing different pages on the website*/
     .nav-menu.show {
@@ -444,8 +446,32 @@ There are multiple backgrounds so that they are ordered in rows while also havin
         transition: .5s;
         row-gap: normal;
     }
+   
+
+    .background {
+    column-gap: 50px;
+    background-color: #87cefa;
+    padding-bottom: 20%;
+    width:200%;
+}
+
+.main-nav {
+    display: grid;
+    grid-template-areas:
+        "nav-brand nav-menu  Mode"
+        "nav-brand info-nav  info-nav"
+    ;
+    grid-template-columns: 1fr, 1fr, 1fr;
+    background-color: black;
+    font-family: "blippo-mn", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    padding: 1rem;
+    width: 200%;
+    column-gap:5px;
 
 
+}
 
 
 

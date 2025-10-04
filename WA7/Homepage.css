@@ -7,11 +7,11 @@
         "nav-brand  nav-menu nav-menu nav-menu nav-menu Mode"
         "nav-brand  info-nav info-nav info-nav info-nav Login"
     ;
-    grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
     column-gap: 5px;
     background-color: black;
     padding: 1rem;
-    width: 160%;
+    width: 100%;
 
 
 }
@@ -31,7 +31,7 @@
 /* This is where we have the overall background of the website and the containers that hold the informattion*/
 .background {
     height: 100%;
-    width: 169%;
+    width: 100%;
     background-color: mediumspringgreen;
     padding-bottom: 2.5%;
 
@@ -146,7 +146,7 @@ h3 {
 
 /* This is for larger screen sizes that fit laptops,pcs,etc*/
 
-@media(min-width:761px) {
+@media(min-width:769px) {
 
 
 
@@ -248,7 +248,7 @@ h3 {
 
 
 /* This is for screen sizes that are smaller like mobile devices*/
-@media(max-width:760px) {
+@media(max-width:768px) {
 
     /* This is for things that deal with accessing different pages on the website*/
     .nav-menu.show {
@@ -466,7 +466,26 @@ h3 {
         transition: .5s;
         row-gap: normal;
     }
+    .background {
+    height: 100%;
+    width: 200%;
+    background-color: mediumspringgreen;
+    padding-bottom: 2.5%;
+    }
+    .main-nav {
+    display: grid;
+    grid-template-areas:
+        "nav-brand  nav-menu nav-menu nav-menu nav-menu Mode"
+        "nav-brand  info-nav info-nav info-nav info-nav Login"
+    ;
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+    column-gap: 5px;
+    background-color: black;
+    padding: 1rem;
+    width: 200%;
 
+
+}
 
 
 
