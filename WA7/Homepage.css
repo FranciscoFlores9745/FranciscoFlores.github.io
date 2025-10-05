@@ -4,8 +4,8 @@
 .main-nav {
     display: grid;
     grid-template-areas:
-        "nav-brand  nav-menu nav-menu nav-menu nav-menu Mode"
-        "nav-brand  info-nav info-nav info-nav info-nav Login"
+        "nav-brand  nav-menu nav-menu nav-menu nav-menu Mode Clear"
+        "nav-brand  info-nav info-nav info-nav info-nav Login Clear"
     ;
     grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
     column-gap: 5px;

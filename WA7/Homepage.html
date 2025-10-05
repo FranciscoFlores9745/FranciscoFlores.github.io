@@ -11,6 +11,7 @@
   <title>Game Information</title>
 
   <link rel="stylesheet" href="Homepage.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 </head>
@@ -22,6 +23,7 @@
   <nav class="main-nav w3-container  s4" tabindex="1">
     <div class="nav-brand w3-container w3-row s2" tabindex="2">
       <h1> Game Information Hub</h1>
+      <h2 id="user">Username:</h2>
     </div>
     <!-- This is the menu for the mobile version -->
     <button class="nav-toggle" id=aria-expanded aria-label="Toggle navigation menu" tabindex="3">
@@ -50,7 +52,9 @@
       <li><button tabindex="14">None</button></li>
     </ul>
 
-     <button id="theme" type="button"><p>Light/Dark Mode</p></button>
+     <button id="theme" type="button" tabindex="15"><p>Light/Dark Mode</p></button>
+     <button id="clear" type="button" tabindex="16"><p>Clear Data</p></button>
+     <button id="login" type="button" tabindex="17"><p>Login</p></button>
   </nav>
 
   <!-- This Contains any information the users wants to see or hide and pictures to help give a visual-->

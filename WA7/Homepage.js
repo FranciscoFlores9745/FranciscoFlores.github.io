@@ -1,3 +1,25 @@
+
+save = 0;
+//Asking whether user wants data to be saved
+function checkCookies() {
+if(save==0){
+ let text = "WARNING DO YOU WANT YOUR DATA SAVED?\nEither OK or Cancel.";
+  if (confirm(text) == true) {
+    console.log("You pressed OK!");
+    save++;
+  } else {
+    console.log("You canceled!");
+  }
+  //document.getElementById("demo").innerHTML = text;
+}
+
+}
+
+
+
+
+
+
 const navToggle = document.querySelector('.nav-toggle');
 const filterToggle = document.querySelector('.filter-toggle');
 const navMenu = document.querySelector('.nav-menu');
@@ -150,13 +172,15 @@ filterButtons.forEach(button => {
 /*make sure to add not only filters but also buttons for more information if the user wants it */
 
 
+
+
 // Save user's theme choice
 let btn = document.querySelector('#theme').addEventListener('click', theme);
 click =0;
 
 //This is where it determines the theme of the page when the persons clicks the button.
 function theme(){
-
+     checkCookies();
     click++;
     console.log("theme works");
     console.log(click);
@@ -177,16 +201,58 @@ function setTheme(theme) {
     }else{
         theme = 'dark';
     }
+    if(save>0){
     localStorage.setItem('userTheme', theme);
+    }
     document.body.className = theme;
 }
 
-// Load saved theme on page load
+// Load saved theme and other saved things on page load
 window.addEventListener('load', function() {
     const savedTheme = localStorage.getItem('userTheme') || 'light';
+        const savedUser =  localStorage.getItem('userName');
     document.body.className = savedTheme;
+     document.getElementById("user").innerHTML =savedUser ;
+     if(localStorage.getItem('userLogged')==1){
+        document.getElementById("login").style.display='none';
+     }
 });
 
 /*The data that I am storing is the information of the theme that the user chose. And this data is 
 necessary because it holds the users preference on how they would like to use the website. This allows
 users to control the look of the site when it comes to fonts and the background.*/
+
+//LOGIN BUTTON
+let Loginbtn = document.querySelector('#login').addEventListener('click', login);
+user=0;
+function login(){
+    checkCookies();
+    let username = prompt("Username:");
+    console.log(username);
+     user++;
+    if(save>0){
+    localStorage.setItem('userName', username);
+    localStorage.setItem('userLogged',user);
+    }
+    document.getElementById("user").innerHTML =username;
+    document.getElementById("login").style.display='none';
+    
+}
+
+
+
+
+
+//Clear button
+let Clearbtn = document.querySelector('#clear').addEventListener('click', clear);
+
+function clear(){
+    console.log("Clear");
+    localStorage.removeItem('userTheme');
+    localStorage.removeItem('userLogged');
+    localStorage.removeItem('userName');
+    localStorage.setItem('userName', 'Username: ')
+    document.getElementById("user").innerHTML ='Username: ';
+    document.getElementById("login").style.display='flex';
+}
+

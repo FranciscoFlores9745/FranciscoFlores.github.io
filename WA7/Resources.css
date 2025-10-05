@@ -2,8 +2,8 @@
 .main-nav {
     display: grid;
     grid-template-areas:
-        "nav-brand nav-menu  Mode"
-        "nav-brand info-nav  info-nav"
+        "nav-brand nav-menu  Mode Clear"
+        "nav-brand info-nav  info-nav Clear"
     ;
     grid-template-columns: 1fr, 1fr, 1fr;
     background-color: black;

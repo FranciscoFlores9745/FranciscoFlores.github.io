@@ -1,3 +1,24 @@
+
+save = 0;
+//Asking whether user wants data to be saved
+function checkCookies() {
+if(save==0){
+ let text = "WARNING DO YOU WANT YOUR DATA SAVED?\nEither OK or Cancel.";
+  if (confirm(text) == true) {
+    console.log("You pressed OK!");
+    save++;
+  } else {
+    console.log("You canceled!");
+  }
+  //document.getElementById("demo").innerHTML = text;
+}
+
+}
+
+
+
+
+
 const navToggle = document.querySelector('.nav-toggle');
 const filterToggle = document.querySelector('.filter-toggle');
 const navMenu = document.querySelector('.nav-menu');
@@ -155,7 +176,7 @@ click =0;
 
 //This is where it determines the theme of the page when the persons clicks the button.
 function theme(){
-
+    checkCookies();
     click++;
     console.log("theme works");
     console.log(click);
@@ -184,8 +205,25 @@ function setTheme(theme) {
 window.addEventListener('load', function() {
     const savedTheme = localStorage.getItem('userTheme') || 'light';
     document.body.className = savedTheme;
+
+    const savedUser =  localStorage.getItem('userName');
+     document.getElementById("user").innerHTML =savedUser ;
 });
 
 /*The data that I am storing is the information of the theme that the user chose. And this data is 
 necessary because it holds the users preference on how they would like to use the website. This allows
 users to control the look of the site when it comes to fonts and the background.*/
+
+
+
+//Clear button
+let Clearbtn = document.querySelector('#clear').addEventListener('click', clear);
+
+function clear(){
+    console.log("Clear");
+    localStorage.removeItem('userTheme');
+    localStorage.removeItem('userLogged');
+    localStorage.removeItem('userName');
+    localStorage.setItem('userName', 'Username: ')
+    document.getElementById("user").innerHTML ='Username: ';
+}
