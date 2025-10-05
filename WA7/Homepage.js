@@ -202,20 +202,21 @@ function setTheme(theme) {
         theme = 'dark';
     }
     if(save>0){
-    localStorage.setItem('userTheme', theme);
+    sessionStorage.setItem('userTheme', theme);
     }
     document.body.className = theme;
 }
 
 // Load saved theme and other saved things on page load
 window.addEventListener('load', function() {
-    const savedTheme = localStorage.getItem('userTheme') || 'light';
-        const savedUser =  localStorage.getItem('userName');
+    const savedTheme = sessionStorage.getItem('userTheme') || 'light';
+        const savedUser = sessionStorage.getItem('userName');
     document.body.className = savedTheme;
      document.getElementById("user").innerHTML =savedUser ;
-     if(localStorage.getItem('userLogged')==1){
+     if(sessionStorage.getItem('userLogged')==1){
         document.getElementById("login").style.display='none';
      }
+     savedUser.clea
 });
 
 /*The data that I am storing is the information of the theme that the user chose. And this data is 
@@ -231,8 +232,8 @@ function login(){
     console.log(username);
      user++;
     if(save>0){
-    localStorage.setItem('userName', username);
-    localStorage.setItem('userLogged',user);
+    sessionStorage.setItem('userName', username);
+    sessionStorage.setItem('userLogged',user);
     }
     document.getElementById("user").innerHTML =username;
     document.getElementById("login").style.display='none';
@@ -248,10 +249,10 @@ let Clearbtn = document.querySelector('#clear').addEventListener('click', clear)
 
 function clear(){
     console.log("Clear");
-    localStorage.removeItem('userTheme');
-    localStorage.removeItem('userLogged');
-    localStorage.removeItem('userName');
-    localStorage.setItem('userName', 'Username: ')
+    sessionStorage.removeItem('userTheme');
+    sessionStorage.removeItem('userLogged');
+    sessionStorage.removeItem('userName');
+    sessionStorage.setItem('userName', 'Username: ')
     document.getElementById("user").innerHTML ='Username: ';
     document.getElementById("login").style.display='flex';
 }

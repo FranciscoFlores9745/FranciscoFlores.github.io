@@ -197,16 +197,16 @@ function setTheme(theme) {
     }else{
         theme = 'dark';
     }
-    localStorage.setItem('userTheme', theme);
+    sessionStorage.setItem('userTheme', theme);
     document.body.className = theme;
 }
 
 // Load saved theme on page load
 window.addEventListener('load', function() {
-    const savedTheme = localStorage.getItem('userTheme') || 'light';
+    const savedTheme = sessionStorage.getItem('userTheme') || 'light';
     document.body.className = savedTheme;
 
-    const savedUser =  localStorage.getItem('userName');
+    const savedUser =  sessionStorage.getItem('userName');
      document.getElementById("user").innerHTML =savedUser ;
 });
 
@@ -221,9 +221,9 @@ let Clearbtn = document.querySelector('#clear').addEventListener('click', clear)
 
 function clear(){
     console.log("Clear");
-    localStorage.removeItem('userTheme');
-    localStorage.removeItem('userLogged');
-    localStorage.removeItem('userName');
-    localStorage.setItem('userName', 'Username: ')
+    sessionStorage.removeItem('userTheme');
+    sessionStorage.removeItem('userLogged');
+    sessionStorage.removeItem('userName');
+    sessionStorage.setItem('userName', 'Username: ')
     document.getElementById("user").innerHTML ='Username: ';
 }
