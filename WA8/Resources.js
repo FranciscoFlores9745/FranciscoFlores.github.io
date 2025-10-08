@@ -19,7 +19,6 @@ if(save==0){
 
 
 
-
 const navToggle = document.querySelector('.nav-toggle');
 const filterToggle = document.querySelector('.filter-toggle');
 const navMenu = document.querySelector('.nav-menu');
@@ -42,13 +41,13 @@ filterToggle.addEventListener('click', showFilter);
 /* Hamburger Menu for the Pages */
 function showMenu() {
     navMenu.classList.toggle("show");
-    navBurger.forEach(span1 => {
-        span1.classList.toggle("open");
+    navBurger.forEach(span => {
+        span.classList.toggle("open");
     })
 
     navMenu.classList.toggle("hide");
-    navBurger.forEach(span1 => {
-        span1.classList.toggle("close");
+    navBurger.forEach(span => {
+        span.classList.toggle("close");
     })
 
 
@@ -70,8 +69,8 @@ document.addEventListener('click', (e) => {
         toggle1 = false;
         document.getElementById('aria-expanded').setAttribute('aria-label', 'Toggle navigation menu')
         navMenu.classList.toggle("hide");
-        navBurger.forEach(span1 => {
-            span1.classList.toggle("close");
+        navBurger.forEach(span => {
+            span.classList.toggle("close");
         })
 
     }
@@ -80,22 +79,22 @@ document.addEventListener('click', (e) => {
 /* Hamburger Menu for the Filters */
 function showFilter() {
     infoNav.classList.toggle("show");
-    navBurger2.forEach(span2 => {
-        span2.classList.toggle("open");
+    navBurger2.forEach(span => {
+        span.classList.toggle("open");
     })
 
     infoNav.classList.toggle("hide");
-    navBurger2.forEach(span2 => {
-        span2.classList.toggle("close");
+    navBurger2.forEach(span => {
+        span.classList.toggle("close");
     })
 
 
     if (toggle2 == false) {
-        document.getElementById('filter-expanded').setAttribute('aria-label', 'Close filter menu')
+        document.getElementById('filter-expanded').setAttribute('aria-label', 'Close navigation menu')
         toggle2 = true;
     }
     else {
-        document.getElementById('filter-expanded').setAttribute('aria-label', 'Toggle filter menu')
+        document.getElementById('filter-expanded').setAttribute('aria-label', 'Toggle navigation menu')
         toggle2 = false;
     }
 
@@ -108,8 +107,8 @@ document.addEventListener('click', (e) => {
         toggle2 = false;
         document.getElementById('filter-expanded').setAttribute('aria-label', 'Toggle navigation menu')
         infoNav.classList.toggle("hide");
-        navBurger2.forEach(span2 => {
-            span2.classList.toggle("close");
+        navBurger2.forEach(span => {
+            span.classList.toggle("close");
         })
 
     }
@@ -120,9 +119,8 @@ document.addEventListener('click', (e) => {
 const filterButtons = document.querySelectorAll('.info-nav li button');
 const contentInfo = document.querySelectorAll('.content-container');
 
-active = 0;
+active=0;
 all=0;
-
 // Button filters
 filterButtons.forEach(button => {
 
@@ -143,9 +141,10 @@ filterButtons.forEach(button => {
                     //card.style.display = 'grid'
                     card.style.opacity = 100;
                     setTimeout(() => card.style.display = 'grid',500);
+                    console.log(active);
                     all++;
 
-                } else if(category === 'none'|| card.dataset.catagory !== category&&active<=1){
+                } else if(category === 'none'|| card.dataset.catagory !== category&&active<=4){
 
                     console.log(card.dataset.catagory);
                     console.log(category);
@@ -153,11 +152,11 @@ filterButtons.forEach(button => {
                     //card.style.display = 'none'
                     card.style.opacity = 0;
                     setTimeout(() => card.style.display = 'none',500);
-                    active ++;
-                    console.log(active);
+                    active++;
 
-                } if(category === 'none'||category==='all'||all===3){
+                } if(category === 'none'||category==='all'||all===6){
                     active=0;
+
                 }
             });
         }
@@ -171,16 +170,13 @@ filterButtons.forEach(button => {
 
 /*make sure to add not only filters but also buttons for more information if the user wants it */
 
-
-
-
 // Save user's theme choice
 let btn = document.querySelector('#theme').addEventListener('click', theme);
 click =0;
 
 //This is where it determines the theme of the page when the persons clicks the button.
 function theme(){
-     checkCookies();
+    checkCookies();
     click++;
     console.log("theme works");
     console.log(click);
@@ -201,46 +197,22 @@ function setTheme(theme) {
     }else{
         theme = 'dark';
     }
-    if(save>0){
     sessionStorage.setItem('userTheme', theme);
-    }
     document.body.className = theme;
 }
 
-// Load saved theme and other saved things on page load
+// Load saved theme on page load
 window.addEventListener('load', function() {
     const savedTheme = sessionStorage.getItem('userTheme') || 'light';
-        const savedUser = sessionStorage.getItem('userName');
     document.body.className = savedTheme;
-     document.getElementById("user").innerHTML =savedUser ;
-     if(sessionStorage.getItem('userLogged')==1){
-        document.getElementById("login").style.display='none';
-     }
 
+    const savedUser =  sessionStorage.getItem('userName');
+     document.getElementById("user").innerHTML =savedUser ;
 });
 
 /*The data that I am storing is the information of the theme that the user chose. And this data is 
 necessary because it holds the users preference on how they would like to use the website. This allows
 users to control the look of the site when it comes to fonts and the background.*/
-
-//LOGIN BUTTON
-let Loginbtn = document.querySelector('#login').addEventListener('click', login);
-user=0;
-function login(){
-    checkCookies();
-    let username = prompt("Username:");
-    console.log(username);
-     user++;
-    if(save>0){
-    sessionStorage.setItem('userName', username);
-    sessionStorage.setItem('userLogged',user);
-    }
-    document.getElementById("user").innerHTML =username;
-    document.getElementById("login").style.display='none';
-    
-}
-
-
 
 
 
@@ -254,6 +226,4 @@ function clear(){
     sessionStorage.removeItem('userName');
     sessionStorage.setItem('userName', 'Username: ')
     document.getElementById("user").innerHTML ='Username: ';
-    document.getElementById("login").style.display='flex';
 }
-

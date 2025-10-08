@@ -1,0 +1,8 @@
+
+The power dynamics that exist between the site and my users is that the users can control whatever they see and how they see it, while the site just holds the information that only the user is willing to give. So the user has a greater control over the site than the site has on the user. This also means that the user data won’t be used against ads, pop ups, or other avenues that companies would use if they had access to the users data. And if the user doesn’t want their data to be saved after they're done, then they can choose to erase that data from the site.
+
+My data extraction would most likely include users as the site would still function without extracting the users data, and if they so happen to choose to save their data, the only thing that will change about the functionality of the website is that the user wouldn’t have to press as many buttons, making it easier and more efficient to navigate the website. And the only time it would exclude users is when they might become annoyed at having to confirm or decline data saving, since they would think that the website is begging them to save their data when that is not the case. 
+
+	If I were to scale this site the additional ethical considerations that would most likely arise is user protection from malicious hackers that would try and use the saved data against them, if I prioritize user retention and attention over everything else, should I allow advertisement on my website or not and in what way, and if I  focus on quantity over quality when it comes to information and layout of the website. So if I were to scale up my website, I would have to worry more and more about the greater ethical considerations that might not even only come from my website, but also outside forces.
+
+
