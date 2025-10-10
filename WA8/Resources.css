@@ -21,31 +21,34 @@
     grid-area: nav-brand;
     text-align: center;
     background-color: palevioletred;
-    width: 400px;
+    width: 100%;
     border-radius: 10%;
 }
 
+.Mode{
+    grid-area:Mode;
+    display:block;
+    width:90%;
+    height:80%;
+    font-size: x-small;
+}
+.Clear{
+    grid-area:Clear;
+    display:block;
+    width:90%;
+    height:80%;
+    font-size: x-small;
+}
+
+
 /* This is mainly to give a distinction between the containers that hold the information and just the background of the website.
 There are multiple backgrounds so that they are ordered in rows while also having 3 columns*/
-.overall {
-    background-color: lightskyblue;
-    padding-bottom: 20px;
-    height: 100%;
-    width: 100%
-}
 
 .background {
     column-gap: 50px;
     background-color: #87cefa;
     padding-bottom: 20%;
     width:100%;
-}
-
-.background2 {
-    display: flex;
-    column-gap: 50px;
-    background-color: lightskyblue;
-    padding-bottom: 20%;
 }
 
 /* This is where the title and informattion will be stored and organized*/
@@ -452,23 +455,47 @@ There are multiple backgrounds so that they are ordered in rows while also havin
     column-gap: 50px;
     background-color: #87cefa;
     padding-bottom: 20%;
-    width:200%;
+    width:100%;
+    
 }
 
 .main-nav {
     display: grid;
     grid-template-areas:
-        "nav-brand nav-menu  Mode"
-        "nav-brand info-nav  info-nav"
+        "nav-brand nav-brand  "
+        " nav-menu  info-nav"
+        "Clear Mode"
     ;
-    grid-template-columns: 1fr, 1fr, 1fr;
+    grid-template-columns: 1fr, 1fr;
     background-color: black;
     font-family: "blippo-mn", sans-serif;
     font-weight: 900;
     font-style: normal;
     padding: 1rem;
-    width: 200%;
+    width: 100%;
     column-gap:5px;
+    height:200px;
+
+
+}
+
+.content-container {
+    display: grid;
+    grid-template-areas:
+    
+        "header header"
+        "info info "
+        "More-info More-info"
+    ;
+    background-color: rgb(100, 155, 200);
+    font-family: "blippo-mn", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    margin-bottom: 2.5%;
+    column-gap: 10%;
+     width: 100%;
+    padding: 10px;
+    grid-gap: 20px;
 
 
 }

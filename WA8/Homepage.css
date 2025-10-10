@@ -336,6 +336,7 @@ h3 {
     }
 
     .nav-toggle {
+        grid-area: nav-menu;
         display: block;
         background-color: #E0115F;
         border-radius: 10%;
@@ -420,6 +421,7 @@ h3 {
     }
 
     .filter-toggle {
+        grid-area:info-nav;
         background-color: orchid;
         display: block;
         padding: .5rem;
@@ -492,7 +494,6 @@ h3 {
         row-gap: normal;
     }
     .background {
-    height: 100%;
     width: 100%;
     background-color: mediumspringgreen;
     padding-bottom: 2.5%;
@@ -500,17 +501,17 @@ h3 {
     .main-nav {
     display: grid;
     grid-template-areas:
-        "nav-brand  nav-menu"
-        "nav-brand  info-nav"
-        "nav-brand  Login"
-        "nav-brand  Mode"
-        "nav-brand Clear"
+        "nav-brand  nav-brand"
+        "nav-menu  info-nav"
+        "Login     Mode"
+        "Clear     Clear"
+       
     ;
-    grid-template-columns: 1fr, 1fr, 1fr, 1fr, 1fr, 1fr;
+   
     column-gap: 5px;
     background-color: black;
-    padding: 1rem;
     width: 100%;
+    height:200%;
 
 
 }
@@ -531,7 +532,7 @@ h3 {
     font-style: normal;
     margin-bottom: 2.5%;
     width: 200%;
-    padding: 10px;
+    
     grid-gap: 20px;
 
 }
@@ -544,6 +545,14 @@ h3 {
 
 
 }
+
+h1 {
+    font-family: "blippo-mn", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: large;
+}
+
 
 
 
@@ -579,33 +588,6 @@ h3 {
 }
 
 
-
-/*@container  back(min-width: 350px) {
-    .background-picture {
-        display: flex;
-        position: absolute;
-        height: 1000px;
-        width: 500px;
-        background-color: blue;
-        margin-left: 700px;
-        top: 200px;
-    }
-
-}
-
-@container back(min-width: 480px) {
-
-    .background-picture {
-        display: flex;
-        position: absolute;
-        height: 1000px;
-        width: 500px;
-        background-color: yellow;
-        margin-left: 700px;
-        top: 200px;
-    }
-
-} */
 
 
 /*Add a "login" button so that theirb username and password is saved*/
