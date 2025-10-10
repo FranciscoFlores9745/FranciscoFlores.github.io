@@ -168,6 +168,10 @@ h3 {
     width: 500px;
     background-color: black;
 }
+a{
+    color: rgb(116, 25, 25);
+    text-decoration: none;
+}
 
 /* This is for larger screen sizes that fit laptops,pcs,etc*/
 
