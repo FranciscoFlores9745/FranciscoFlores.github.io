@@ -48,28 +48,43 @@ html {
     font-weight: 400;
     font-style: normal;
   }
+
   
   .quote-text {
     padding-bottom: 20px;
     font-size: 25px;
     color: rgb(255, 255, 255);
   }
+
+  
+
   
   .controls {
     width: 100%;
     padding: 20px 50px;
   }
+
+  .multiple-choice{
+    padding: 20px 50px;
+    min-height: 200px;
+  }
+
+  .multple-answer{
+  text-decoration: none;
+  }
   
   .button {
     display: block;
-    color: white;
+    background-color: #ead27d;
+    color: rgb(0, 0, 0);
     border-radius: 10%;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     text-align: center;
     width: 100%;
-    height:75px;
+    height:10%;
+    margin-bottom: 20px;
     font-size: 20px;
     box-shadow: 0 2px 2px 0 rgba(255, 255, 255, 0.838), 0 3px 1px -2px rgba(255, 255, 255, 0.838), 0 1px 5px 0 rgba(255, 255, 255, 0.838);
     font-family: "panoptica", sans-serif;
