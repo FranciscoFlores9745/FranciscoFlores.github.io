@@ -4,15 +4,18 @@ addEventListener('click', newTrivia);
 let asnwerBtn = document.querySelector('#js-tweet').
 addEventListener('click',newAnswer);
 
-let languageBtn = document.querySelector("#js-language").
-addEventListenter('click',newLanguage);
+let wrongBtn = document.querySelector("#js-wrong").
+addEventListener('click',newWrong);
 
 let current = {
     question: "",
     answer: "",
+    wrong: ["","",""],
 }
-function newLanguage(){
-
+function newWrong(){
+const answerText = document.querySelector('#js-wrong-text');
+answerText.textContent = current.wrong;
+ 
 }
 setTimeout(function(){
     console.log("Blah");
@@ -31,11 +34,14 @@ async function newTrivia(){
         }
         
         const json =  await response.json();
-        //console.log(json);
+        console.log(json);
         //console.log(json['results'][0]['question']);
         displayTrivia(json['results'][0]['question']);
         current.question = json['results'][0]['question'];
         current.answer = json['results'][0]['correct_answer'];
+        current.wrong[0] = json['results'][0]['incorrect_answers'][0];
+        current.wrong[1] = json['results'][0]['incorrect_answers'][1];
+        current.wrong[2] = json['results'][0]['incorrect_answers'][2];
         console.log(current.question);
         console.log(current.answer);
     }catch (err){
