@@ -1,3 +1,5 @@
+
+
 let triviaBtn = document.querySelector("#js-new-quote").
 addEventListener('click', newTrivia);
 
@@ -34,9 +36,14 @@ let current = {
 
 const endpoint = "https://opentdb.com/api.php?amount=1&category=15&type=multiple";
 
-setTimeout(async function newTrivia(){
-    //console.log("Success");
 
+function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function newTrivia(){
+    //console.log("Success");
+   await delay(2000);
     try {
         const response = await fetch(endpoint);
     
@@ -73,7 +80,8 @@ setTimeout(async function newTrivia(){
      document.getElementById('js-multiple-text2').style.backgroundColor = "white";
      document.getElementById('js-multiple-text3').style.backgroundColor = "white";
      document.getElementById('js-multiple-text4').style.backgroundColor = "white";
-},1000);
+}
+
 
 function displayTrivia(question, multiple) {
     const questionText = document.querySelector('#js-quote-text');
