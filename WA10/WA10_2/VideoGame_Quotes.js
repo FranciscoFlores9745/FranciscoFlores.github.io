@@ -43,6 +43,7 @@ function delay(ms) {
 
 async function newTrivia(){
     //console.log("Success");
+    document.getElementById('loader').style.display = "block";
    await delay(2000);
     try {
         const response = await fetch(endpoint);
@@ -80,6 +81,8 @@ async function newTrivia(){
      document.getElementById('js-multiple-text2').style.backgroundColor = "white";
      document.getElementById('js-multiple-text3').style.backgroundColor = "white";
      document.getElementById('js-multiple-text4').style.backgroundColor = "white";
+
+     document.getElementById('loader').style.display = "none";
 }
 
 
