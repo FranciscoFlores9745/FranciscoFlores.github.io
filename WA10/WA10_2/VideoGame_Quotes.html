@@ -13,27 +13,32 @@
         <header>Random Video Game Trivia</header>
         <section class="quotes">
             <h2>:</h2>
-          <div class="quote-text" id="js-quote-text"></div>
-          <button type ="button" class="multiple-answer button" id="js-multiple-text1"></button>
-          <button type ="button" class="multiple-answer button" id="js-multiple-text2"></button>
-          <button type ="button" class="multiple-answer button" id="js-multiple-text3"></button>
-          <button type ="button" class="multiple-answer button" id="js-multiple-text4"></button>
-          <div class="quote-text" id="js-answer-text"></div>
-          <div class="quote-text" id="js-wrong-text"></div>
+          <div class="quote-text" id="js-quote-text" tab-index="0"></div>
+          <button type ="button" class="multiple-answer button" id="js-multiple-text1" tab-index="1"></button>
+          <button type ="button" class="multiple-answer button" id="js-multiple-text2" tab-index="2"></button>
+          <button type ="button" class="multiple-answer button" id="js-multiple-text3" tab-index="3"></button>
+          <button type ="button" class="multiple-answer button" id="js-multiple-text4" tab-index="4"></button>
+          <div class="quote-text" id="js-answer-text" tab-index="5"></div>
+          <div class="quote-text" id="js-wrong-text" tab-index="6"></div>
         </section>
   
         <section class="controls" >
             <h2>:</h2>
-          <button type="button" id="js-new-quote" class="new-quote button">
+          <button type="button" id="js-new-quote" class="new-quote button" tab-index="7">
             Generate a new bit of trivia!
           </button>
-          <button type="button" id="js-tweet" class="twitter button">
+          <button type="button" id="js-tweet" class="twitter button" tab-index="8">
             Show me the answer!
           </button>
-          <button type="button" id="js-wrong" class="wrong-answer button">
+          <button type="button" id="js-wrong" class="wrong-answer button" tab-index="9">
             Show me the wrong answers!
           </button>
           <!-- <a class="answer button" id="js-tweet" target="_blank" rel="noreferrer">Show me the answer!</a> -->
+          <p style="color: white" tab-index="10">Correct:</p>
+          <div id="myElement" style="color: white" tab-index="11"></div>
+          <p style="color: white" tab-index="12">Wrong:</p>
+          <div id="myElement2" style="color: white" tab-index="13 "></div>
+        
         </section>
       </div>
       <script src="VideoGame_Quotes.js"></script>
