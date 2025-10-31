@@ -48,8 +48,9 @@
 }
 
 .Weather{
-      display: block;
+    display: block;
     width:40%;
     grid-area:Weather;
     background-color: rgb(42, 237, 51);
+    
 }
