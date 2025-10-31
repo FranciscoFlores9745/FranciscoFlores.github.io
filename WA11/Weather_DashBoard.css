@@ -1,0 +1,55 @@
+.background{
+    display:grid;
+    background-color: rgb(209, 229, 255);
+
+    grid-template-areas: 
+    "Title Menu "
+    "Location City-Level"
+    "City-Entry Weather"
+
+    ;
+     height:600px;
+}
+
+
+.Title{
+    display:block;
+    width:40%;
+    grid-area:Title;
+    background-color: whitesmoke;
+    
+}
+
+.Menu{
+    display:block;
+    width:40%;
+    grid-area: Menu;
+    background-color:aliceblue;
+}
+
+.Location{
+    display:block;
+    width:40%;
+    grid-area:Location;
+    background-color: azure;
+}
+.City-Level{
+    display: block;
+    width:40%;
+    grid-area:City-Level;
+    background-color: brown;
+}
+
+.City-Entry{
+    display: block;
+    width:40%;
+    grid-area:City-Entry;
+    background-color: rgb(47, 15, 4);
+}
+
+.Weather{
+      display: block;
+    width:40%;
+    grid-area:Weather;
+    background-color: rgb(42, 237, 51);
+}
