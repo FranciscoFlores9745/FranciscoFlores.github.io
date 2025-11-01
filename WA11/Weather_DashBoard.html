@@ -15,33 +15,32 @@
 
      </div>
 
-     <div class="Menu">
+     <div class="Menu" id="menu">
        <button> Menu</button>
      </div>
 
-     <div class="Location" >
-     <button type="button" id="Newlocation">Location</button>
-     <div id="location">
-
-     </div>
+     <div class="location hide">
+     <button type="button" id="Newlocation">Precise</button>
      </div>
 
-     <div class="City-Level">
-        <button type="button" id="Newcitylevel">City-Level</button>
-        <div  id="citylevel">
-
-        </div>
+     <div class="City-Level hide">
+        <button type="button" id="Newcitylevel">City</button>
      </div>
 
-     <div class="City-Entry" id="cityentry">
-        <button>City-Entry</button>
+     <div class="City-Entry hide" >
+      <p id="location"></p>
+      <p id="citylevel"></p>
+      <p id="longitude"></p>
+      <p id="latitude"></p>
      </div>
 
-    <div class="Weather" id="weather"> 
+
+    <div class="Weather hide"> 
        <p>Weather:</p>
+       <p id="weather"></p>
     </div>
 </div>
 
-<script src="Weather_DashBoard.js"></script>
+<script src="Weather_DashBoard.js" defer></script>
 </body>
 </html>

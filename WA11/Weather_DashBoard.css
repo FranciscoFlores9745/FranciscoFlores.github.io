@@ -27,30 +27,44 @@
     background-color:aliceblue;
 }
 
-.Location{
+.location.show{
     display:block;
     width:40%;
     grid-area:Location;
     background-color: azure;
 }
-.City-Level{
+
+.location.hide{
+    display:none;
+}
+.City-Level.show{
     display: block;
     width:40%;
     grid-area:City-Level;
     background-color: brown;
 }
+.City-Level.hide{
+    display:none;
+}
 
-.City-Entry{
+.City-Entry.show{
     display: block;
     width:40%;
     grid-area:City-Entry;
     background-color: rgb(47, 15, 4);
+    color:white;
 }
-
-.Weather{
+.City-Entry.hide{
+    display:none;
+}
+.Weather.show{
     display: block;
     width:40%;
     grid-area:Weather;
     background-color: rgb(42, 237, 51);
-    
+
+}
+
+.Weather.hide{
+    display:none;
 }
