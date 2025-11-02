@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="Weather_DashBoard.css" aria-disabled="true" media="all">
+    <link rel="stylesheet" href="https://use.typekit.net/vbm3syx.css">
     <title>Document</title>
     
 </head>
@@ -15,29 +16,42 @@
 
      </div>
 
-     <div class="Menu" id="menu">
-       <button> Menu</button>
+     <div >
+       <button class="Menu" id="menu"> Menu</button>
+       <button  class="location hide" type="button" id="Newlocation">Precise</button>
+        <button  class="City-Level hide" type="button" id="Newcitylevel">City</button>
      </div>
 
-     <div class="location hide">
-     <button type="button" id="Newlocation">Precise</button>
-     </div>
-
-     <div class="City-Level hide">
-        <button type="button" id="Newcitylevel">City</button>
-     </div>
+  
 
      <div class="City-Entry hide" >
+      <h2>Country:  </h2>
       <p id="location"></p>
+      <h2>City:  </h2>
       <p id="citylevel"></p>
+      <h2>Longitude: </h2>
       <p id="longitude"></p>
+      <h2>Latitude: </h2>
       <p id="latitude"></p>
      </div>
 
 
     <div class="Weather hide"> 
-       <p>Weather:</p>
+       <h3>Weather:</h3>
+      <img  src="Overcast.jpg" alt="" width="10%"></img> 
        <p id="weather"></p>
+       
+       <h3>Humidity:</h3>
+       <p id="humidity"></p>
+       <p>Percent</p>
+
+       <h3>Pressure:</h3>
+       <p id="pressure"></p>
+       <p>mm</p>
+
+       <h3>Temperature:</h3>
+       <p id="temperature"></p>
+       <p>Kelvin</p>
     </div>
 </div>
 

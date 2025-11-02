@@ -20,6 +20,9 @@ let current = {
     longitude: "unavailable",
     latitude: " unavailable",
     weather: "",
+    humidity:"",
+    pressure:"",
+    temperature:"",
     show: 0
 }
 
@@ -64,11 +67,11 @@ async function newCity(){
       current.location = json["sys"]["country"];
       current.city = json["name"];
       current.longitude ="";
-       current.latitude ="";
-       current.weather = json["weather"][0]["description"];
-     } else if (privacyLevel === 'precise') {
-       current.longitude ="";
-       current.latitude ="";
+      current.latitude ="";
+      current.weather = json["weather"][0]["description"];
+      current.humidity = json["main"]["humidity"];
+      current.pressure = json["main"]["pressure"];
+      current.temperature = json["main"]["temp"];
      }
     console.log(current.city);
     console.log(current.location);
@@ -87,6 +90,9 @@ function displayInfo(city) {
     const longitudeText = document.querySelector('#longitude');
     const latitudeText = document.querySelector('#latitude');
     const WeatherText = document.querySelector('#weather');
+    const HumidityText = document.querySelector('#humidity');
+    const PressureText = document.querySelector('#pressure');
+    const TemperatureText = document.querySelector('#temperature');
 
     cityText.textContent = city;
     locationText.textContent = current.location;
@@ -94,6 +100,9 @@ function displayInfo(city) {
     latitudeText.textContent = current.latitude;
 
     WeatherText.textContent = current.weather;
+    HumidityText.textContent = current.humidity;
+    PressureText.textContent = current.pressure;
+    TemperatureText.textContent = current.temperature;
     }
 
 }
@@ -115,14 +124,15 @@ async function newLocation(){
 
     // Let user choose location precision
         // Let user choose location precision
-    if (privacyLevel === 'city') {
-  // Only send city name to API, not exact coordinates
-      console.log("weather");
-      current.location = json["sys"]["country"];
+   if (privacyLevel === 'precise') {
+        current.location = json["sys"]["country"];
       current.city = json["name"];
-     } else if (privacyLevel === 'precise') {
        current.longitude =json["coord"]["lon"];
        current.latitude = json["coord"]["lat"];
+       current.weather = json["weather"][0]["description"];
+       current.humidity = json["main"]["humidity"];
+       current.pressure = json["main"]["pressure"];
+       current.temperature = json["main"]["temp"];
      }
      current.show++;
      displayInfo(json["name"]);
