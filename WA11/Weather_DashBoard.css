@@ -97,7 +97,7 @@
 .City-Entry.show{
     display: block;
     width:90%;
-    margin-top: 45%;
+    margin-top: 25%;
     grid-area:City-Entry;
     background-color: rgb(0, 137, 131);
     color:white;
