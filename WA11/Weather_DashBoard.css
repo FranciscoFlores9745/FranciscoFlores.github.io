@@ -40,6 +40,15 @@
     
 }
 
+.Menu:hover{
+    background-color:rgb(195, 186, 255);
+    
+}
+
+.Menu:focus{
+     background-color:rgb(195, 186, 255);
+}
+
 .location.show{
     display:block;
     width:90%;
@@ -49,6 +58,14 @@
     border-radius: 20px;
     border-style: none;
     background-color: rgb(255, 217, 80);
+}
+
+.location.show:hover{
+    background-color: rgb(225, 255, 0);
+}
+
+.location.show:focus{
+    background-color: rgb(225, 255, 0);
 }
 
 .location.hide{
@@ -64,6 +81,15 @@
     background-color: rgb(235, 138, 11);
     border-style: none;
 }
+
+.City-Level.show:hover{
+    background-color:   rgb(255, 247, 0);
+}
+
+.City-Level.show:focus{
+    background-color:   rgb(255, 247, 0);
+}
+
 .City-Level.hide{
     display:none;
 }

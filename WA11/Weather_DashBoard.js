@@ -69,9 +69,9 @@ async function newCity(){
       current.longitude ="";
       current.latitude ="";
       current.weather = json["weather"][0]["description"];
-      current.humidity = json["main"]["humidity"];
-      current.pressure = json["main"]["pressure"];
-      current.temperature = json["main"]["temp"];
+      current.humidity = json["main"]["humidity"] + "%";
+      current.pressure = json["main"]["pressure"] + "mm";
+      current.temperature = json["main"]["temp"] + "K";
      }
     console.log(current.city);
     console.log(current.location);
@@ -127,12 +127,12 @@ async function newLocation(){
    if (privacyLevel === 'precise') {
         current.location = json["sys"]["country"];
       current.city = json["name"];
-       current.longitude =json["coord"]["lon"];
-       current.latitude = json["coord"]["lat"];
+       current.longitude =json["coord"]["lon"] + "°";
+       current.latitude = json["coord"]["lat"] + "°";
        current.weather = json["weather"][0]["description"];
-       current.humidity = json["main"]["humidity"];
-       current.pressure = json["main"]["pressure"];
-       current.temperature = json["main"]["temp"];
+       current.humidity = json["main"]["humidity"] + "%";
+       current.pressure = json["main"]["pressure"] + "mm";
+       current.temperature = json["main"]["temp"] + "K";
      }
      current.show++;
      displayInfo(json["name"]);
