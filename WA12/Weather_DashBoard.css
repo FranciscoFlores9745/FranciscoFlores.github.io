@@ -1,0 +1,122 @@
+.background{
+    display:grid;
+    background-color: rgb(209, 229, 255);
+
+    grid-template-areas: 
+    "Title Title Title Title"
+    "Menu Menu Menu Menu"
+    "Location Location Location Location"
+    "City-Level City-Level City-Level City-Level"
+    "City-Entry City-Entry City-Entry Weather"
+
+    ;
+     height:fit-content;
+     font-family: "sweater-school", sans-serif;
+     font-weight: 700;
+     font-style: normal;
+}
+
+
+.Title{
+    display:block;
+    width:40%;
+    grid-area:Title;
+    background-color: whitesmoke;
+    font-family: "firelli-variable", sans-serif;
+    font-variation-settings: "wght" 100;
+    font-size: x-large;
+    
+}
+
+.Menu{
+    display:block;
+    width:90%;
+    height: 50%;
+    margin-top: 10%;
+    grid-area: Menu;
+    border-radius: 20px;
+    border-style: none;
+    background-color:whitesmoke;
+    
+}
+
+.Menu:hover{
+    background-color:rgb(195, 186, 255);
+    
+}
+
+.Menu:focus{
+     background-color:rgb(195, 186, 255);
+}
+
+.location.show{
+    display:block;
+    width:90%;
+    height: 50%;
+    margin-top: 10%;
+    grid-area:Location;
+    border-radius: 20px;
+    border-style: none;
+    background-color: rgb(255, 217, 80);
+}
+
+.location.show:hover{
+    background-color: rgb(225, 255, 0);
+}
+
+.location.show:focus{
+    background-color: rgb(225, 255, 0);
+}
+
+.location.hide{
+    display:none;
+}
+.City-Level.show{
+    display: block;
+    width:90%;
+    height: 50%;
+    margin-top: 10%;
+    grid-area:City-Level;
+    border-radius: 20px;
+    background-color: rgb(235, 138, 11);
+    border-style: none;
+}
+
+.City-Level.show:hover{
+    background-color:   rgb(255, 247, 0);
+}
+
+.City-Level.show:focus{
+    background-color:   rgb(255, 247, 0);
+}
+
+.City-Level.hide{
+    display:none;
+}
+
+.City-Entry.show{
+    display: block;
+    width:90%;
+    margin-top: 25%;
+    grid-area:City-Entry;
+    background-color: rgb(0, 137, 131);
+    color:white;
+}
+.City-Entry.hide{
+    display:none;
+}
+.Weather.show{
+    display: block;
+    width:40%;
+    grid-area:Weather;
+    background-color: rgb(120, 246, 195);
+
+}
+
+.Weather.hide{
+    display:none;
+}
+
+body{
+ background-color: rgb(209, 229, 255);
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Weather_DashBoard.css" aria-disabled="true" media="all">
+    <link rel="stylesheet" href="https://use.typekit.net/vbm3syx.css">
+    <title>Document</title>
+    
+</head>
+<body>
+    
+<div class="background">
+     <div class="Title"> 
+        <heading tabindex = "1">News</heading>
+
+     </div>
+
+     <div >
+       <button class="Menu" id="menu" tabindex = "2"> Menu</button>
+       <button  class="location hide" type="button" id="Newlocation" tabindex = "3">Precise</button>
+        <button  class="City-Level hide" type="button" id="Newcitylevel" tabindex = "4">City</button>
+     </div>
+
+  
+
+     <div class="City-Entry hide" >
+      <h2 tabindex = "5">Country:  </h2>
+      <p id="location" tabindex = "6"></p>
+      <h2 tabindex = "7">City:  </h2>
+      <p id="citylevel" tabindex = "8"></p>
+      <h2 tabindex = "9">Longitude: </h2>
+      <p id="longitude" tabindex = "10"></p>
+      <h2 tabindex = "11">Latitude: </h2>
+      <p id="latitude" tabindex = "12"></p>
+     </div>
+
+
+    <div class="Weather hide"> 
+       <h3 tabindex = "13">Weather:</h3>
+      <img  src="Overcast.jpg" alt="" width="100" tabindex = "14"> 
+       <p id="weather" tabindex = "15"></p>
+       
+       <h3 tabindex = "16">Humidity:</h3>
+       <p id="humidity" tabindex = "17"></p>
+
+
+       <h3 tabindex = "18">Pressure:</h3>
+       <p id="pressure" tabindex = "19"></p>
+      
+
+       <h3 tabindex = "20">Temperature:</h3>
+       <p id="temperature" tabindex = "21"></p>
+       
+    </div>
+</div>
+
+<script src="Weather_DashBoard.js" defer></script>
+</body>
+</html>
