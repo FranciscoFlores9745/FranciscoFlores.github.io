@@ -14,6 +14,8 @@ const LevelDisplay =  document.querySelector('.City-Level');
 const EntryDisplay =  document.querySelector('.City-Entry');
 const WeatherDisplay =  document.querySelector('.Weather');
 
+const MenuActive = document.querySelector('.Menu');
+
 let current = {
     location:"",
     city: "",
@@ -27,18 +29,43 @@ let current = {
 }
 
  privacyLevel = "";
+ visible = 0;
+ active = 0;
 
 function newMenu(){
     current.show = 0;
     console.log("wow");
+
+    MenuActive.setAttribute('aria-label', "active");
+    if(visible==1){
+    MenuActive.setAttribute('aria-label', 'not active');
+   
+    }
+    
     LocationDisplay.classList.toggle('show');
     LocationDisplay.classList.toggle('hide');
+
+
     LevelDisplay.classList.toggle('show');
     LevelDisplay.classList.toggle('hide');
+
+
     EntryDisplay.classList.toggle('show');
     EntryDisplay.classList.toggle('hide');
+    EntryDisplay.setAttribute('aria-label', 'show city');
+    if(visible==1){
+    EntryDisplay.setAttribute('aria-label', 'hide city');
+    }
+
     WeatherDisplay.classList.toggle('show');
     WeatherDisplay.classList.toggle('hide');
+    WeatherDisplay.setAttribute('aria-label', 'show weather');
+     if(visible==1){
+    WeatherDisplay.setAttribute('aria-label', 'hide weather');
+    visible=-1;
+    }
+    
+    visible++;
     
 }
 
@@ -72,6 +99,10 @@ async function newCity(){
       current.humidity = json["main"]["humidity"] + "%";
       current.pressure = json["main"]["pressure"] + "mm";
       current.temperature = json["main"]["temp"] + "K";
+      LocationDisplay.setAttribute('aria-label', 'precise notActive');
+        LevelDisplay.setAttribute('aria-label', 'city Active');
+
+      
      }
     console.log(current.city);
     console.log(current.location);
@@ -133,6 +164,8 @@ async function newLocation(){
        current.humidity = json["main"]["humidity"] + "%";
        current.pressure = json["main"]["pressure"] + "mm";
        current.temperature = json["main"]["temp"] + "K";
+        LocationDisplay.setAttribute('aria-label', 'precise Active');
+        LevelDisplay.setAttribute('aria-label', 'city notActive');
      }
      current.show++;
      displayInfo(json["name"]);

@@ -17,14 +17,14 @@
      </div>
 
      <nav>
-       <button class="Menu" id="menu" tabindex = "2"> Menu</button>
-       <button  class="location hide" type="button" id="Newlocation" tabindex = "3">Precise</button>
-        <button  class="City-Level hide" type="button" id="Newcitylevel" tabindex = "4">City</button>
+       <button class="Menu" id="menu" tabindex = "2" aria-label="not active"> Menu</button>
+       <button  class="location hide" type="button" id="Newlocation" tabindex = "3" aria-label="precise notActive">Precise</button>
+        <button  class="City-Level hide" type="button" id="Newcitylevel" tabindex = "4" aria-label="city notActive">City</button>
      </nav>
 
   
 
-     <div class="City-Entry hide" >
+     <div class="City-Entry hide" aria-label="hide city">
       <h2 tabindex = "5">Country:  </h2>
       <p id="location" tabindex = "6"></p>
       <h2 tabindex = "7">City:  </h2>
@@ -36,7 +36,7 @@
      </div>
 
 
-    <div class="Weather hide"> 
+    <div class="Weather hide" aria-label="hide weather"> 
        <h3 tabindex = "13">Weather:</h3>
       <img  src="Overcast.jpg" alt="" width="100" tabindex = "14"> 
        <p id="weather" tabindex = "15"></p>
