@@ -52,18 +52,11 @@ function newMenu(){
 
     EntryDisplay.classList.toggle('show');
     EntryDisplay.classList.toggle('hide');
-    EntryDisplay.setAttribute('aria-label', 'show city');
-    if(visible==1){
-    EntryDisplay.setAttribute('aria-label', 'hide city');
-    }
+
 
     WeatherDisplay.classList.toggle('show');
     WeatherDisplay.classList.toggle('hide');
-    WeatherDisplay.setAttribute('aria-label', 'show weather');
-     if(visible==1){
-    WeatherDisplay.setAttribute('aria-label', 'hide weather');
-    visible=-1;
-    }
+
     
     visible++;
     
