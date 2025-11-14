@@ -1,0 +1,54 @@
+.background{
+    background-color:whitesmoke;
+    grid-template-areas: 
+    "Lobby blank blank blank"
+    "Player1 blank blank blank"
+    "Player2 blank blank blank"
+    "Player3 blank blank blank"
+    "Player4 blank blank blank"
+    "blank blank blank Play";
+}
+
+body{
+ background-color: cadetblue;
+}
+
+.lobby{
+    grid-area:Lobby;
+}
+
+.player1{
+    display:block;
+    grid-area:Player1;
+    background-color: rgb(166, 216, 255);
+    width: 15%;
+}
+
+.player2{
+    display:block;
+    grid-area:Player2;
+    background-color: rgb(166, 216, 255);
+    width: 15%;
+}
+.player3{
+    display:block;
+    grid-area:Player3;
+    background-color: rgb(166, 216, 255);
+    width: 15%;
+}
+.player4{
+    display:block;
+    grid-area:Player4;
+    background-color: rgb(166, 216, 255);
+    width: 15%;
+}
+
+.play{
+    grid-area:Play;
+    background-color: rgb(255, 164, 67);
+}
+
+.blank{
+    grid-area:blank;
+    background-color: whitesmoke;
+}
