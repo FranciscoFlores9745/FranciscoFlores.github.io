@@ -62,7 +62,7 @@ body {
 .centerHover span:before {
     content: '';
     display: inline-block;
-    height: 1px;
+    height: 10px;
     width: 16px;
     margin-right: 12px;
     margin-bottom: 4px;
@@ -73,7 +73,7 @@ body {
 .centerHover span:after {
     content: '';
     display: inline-block;
-    height: 1px;
+    height: 10px;
     width: 16px;
     margin-left: 12px;
     margin-bottom: 4px;
@@ -133,7 +133,7 @@ canvas {
 .centerHover span {
     color: #f0ff67;
     font-family: serif;
-    font-size: 18px;
+    font-size: 50px;
     position: relative;
     transition: all 500ms;
 }
@@ -141,8 +141,8 @@ canvas {
 .centerHover span:before {
     content: '';
     display: inline-block;
-    height: 1px;
-    width: 16px;
+    height: 10px;
+    width: 25px;
     margin-right: 12px;
     margin-bottom: 4px;
     background-color: #666;
@@ -152,8 +152,8 @@ canvas {
 .centerHover span:after {
     content: '';
     display: inline-block;
-    height: 1px;
-    width: 16px;
+    height: 10px;
+    width: 25px;
     margin-left: 12px;
     margin-bottom: 4px;
     background-color: #666;
